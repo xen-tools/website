@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Software for the Xen hypervisor" />
+  <meta name="keywords" content="xen,debian,xen-tools" />
+  <meta name="author" content="Steve Kemp" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+  <title>xen-tools.org - Xen Software: xen-shell installation</title>
+</head>
+
+<body>
+  <div id="page-container">
+
+  	<!-- HEADER -->
+    <!-- Global Navigation -->
+		<h3 class="hide">Global Navigation</h3>
+    <div class="nav-global-container">
+      <div class="nav-global nav-global-font">
+			  <ul>
+    	    <li><a href="/contact/">Contact</a></li>
+	    <li><a href="/sitemap.html">Site Map</a></li>
+        </ul>
+		  </div>
+    </div>				
+
+    <!-- Sitename and Banner -->
+		<div class="site-name">
+		Xen-Tools.org
+		</div>		 						
+		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
+		
+    <!-- Main Navigation -->										
+		<h3 class="hide">Top Navigation</h3>		
+    <div class="nav-main nav-main-font">			
+<!--#include virtual="/inc/top-menu.html" -->
+		</div>
+		
+  	<!-- Sub-Navigation -->
+		<h3 class="hide">Left Navigation</h3>
+		<div class="nav-sub nav-sub-font nav-sub-align">
+    <div class="buffer"></div>
+    <div class="buffer"></div>
+      <ul>
+        <li class="title">xen-shell</li>
+        <li class="group"><a href="/software/xen-shell/">Documentation</a></li>
+        <li><a href="/software/xen-shell/">Introduction</a></li>
+        <li><a href="/software/xen-shell/install.html" class="selected">Installation</a></li>
+        <li><a href="/software/xen-shell/lists.html">Mailing lists</a></li>
+        <li><a href="/software/xen-shell/commands.html">Shell Commands</a></li>
+        <li><a href="/software/xen-shell/faq.html">FAQ</a></li>
+        <li class="group"><a href="/software/xen-shell/releases.html">Download</a></li>
+        <li><a href="/software/xen-shell/releases.html">Releases</a></li>
+        <li><a href="/software/xen-shell/mercurial.html">Mercurial</a></li>
+
+      </ul>
+      <p></p>
+
+<!-- google -->
+<p>&nbsp;</p>
+<p>Sponsored Links:</p>
+<div style="text-align: center;">
+<p></p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-1910202134166551";
+google_ad_width = 125;
+google_ad_height = 125;
+google_ad_format = "125x125_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- /google -->
+    </div>
+						
+    <!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar">						
+
+  	<!-- 	CONTENT -->
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+  	  <!-- Page title -->		
+		  <div class="content-pagetitle"></div>
+
+			
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Installing &amp; using the Xen-Shell</div>
+        <div class="contentbox-noshading">
+        <p>This shell makes several assumptions in the way that it operates:</p>
+<ul>
+<li>That you have a Xen 3.x host running.</li>
+<li>Then Xen host has several guests running.</li>
+<li>That you don't wish to give your users shell access on the host.</li>
+</ul>
+<br />
+<p>If these assumptions are not valid for your environment then you might find that you have problems.</p>
+
+<dl>
+<dt>Installation</dt>
+<dd><p>Download either <a href="releases.html">a release</a>, or a current version of <a href="cvs.html">the CVS repository</a> and install it by executing:</p>
+<pre>
+make install
+</pre>
+</dd>
+<dt>Configuring Users</dt>
+<dd><p>Each user is expected to login directly to the xen-shell, and not have any other access to the host system.  To do this change their login shell by running:</p>
+<pre>
+chsh -s /usr/local/bin/xen-login-shell <b>username</b>
+</pre>
+<p>This will ensure when they connect to the system they will login to the shell, and run it within GNU Screen.</p>
+<p><b>Note:</b> CVS and Debian binary packages use <tt>/usr/bin</tt> instead of <tt>/usr/local/</tt>.</p>
+<p>Once you've changed the shell for the user you must update your Xen configuration files so that they include the username(s) of the users who can control them.</p>
+<p>To allow the user "bob" and the user "steve" to control the Xen guest "builder.my.flat" you would add the following to <tt>/etc/xen/builder.my.flat.cfg</tt>:</p>
+<pre>
+# All instances must have a name
+name = 'builder.my.flat'   
+
+# These users may control this instance.
+xen_shell = 'bob, steve'
+</pre>
+</dd>
+<dt>Bandwidth Accounting</dt>
+<dd><p>The shell allows the user to view the bandwidth they have transferred over a given period, using the <tt>bandwidth</tt> command.</p>
+<p>For this to work the <tt>vnstat</tt> tool must be installed and configured upon dom0.  It is assumed that each Xen guest will have their network interface named the same as the guest name.</p>
+<p>For example a Xen guest called 'skx' will have a network interface 'skx' upon dom0.  If you're using the standard Xen configuration setup you can achieve this by changing your <tt>skx.cfg</tt> file to read:</p>
+<pre>
+vif = [ 'vifname=skx,ip=1.2.3.4' ]
+</pre>
+<p><b>Note</b>: if you have more than one IP address allocated to a guest you will have to create a more complicated setup.</p>
+</dd>
+<dt>Security</dt>
+<dd><p>Since the xen administrator command <tt>xm</tt> requires root privileges to run you will need to configure <tt>sudo</tt> to allow the users who are running your shell to execute that command, without being prompted for a password, as root.</p>
+<p>Add something similar to the following to your <tt>/etc/sudoers</tt> file:</p>
+<pre>
+User_Alias   XENUSERS = steve,bob,fred,foo
+Cmnd_Alias   XEN      = /usr/sbin/xm
+Cmnd_Alias   XENIMG   = /usr/bin/xen-create-image
+XENUSERS     ALL      = NOPASSWD: XEN,XENIMG
+</pre>
+        <p><b>Note:</b> you only need to grant the ability to run <tt>xen-create-image</tt> if you wish to enable reimaging support in the shell.</p>
+</dd>
+<dt>DNS Updates</dt>
+<dd><p>When the shell starts it will look for the file <tt>ips.txt</tt> in the home directory of the user who connects.  If that file doesn't exist then the <tt>rdns</tt> command will be disabled.</p>
+        <p>If you wish to allow users to control their reverse DNS create that file and give it contents such as these:</p>
+<pre>
+192.168.1.1 foo.my.domain
+192.168.1.2 bar.my.domain
+</pre>
+        <p>This file will be updated by the user when they invoke the <tt>rdns</tt> command.  It is up to you to read the files and create the corresponding zonefiles / DNS updates.  The shell will only manipulate the file - not push DNS updates itself.</p>
+</dd>
+<dt>Reimaging Support</dt>
+<dd><p>If a user connects to the shell and has the executable file <tt>image.sh</tt> in their home directory the <tt>reimage</tt> command will be enabled.</p>
+        <p>When the user invokes the command the <tt>image.sh</tt> script is executed after prompting for confirmation, and performing a last-chance count-down.</p>
+        <p>It is up to you to create and configure this script to do the right thing.  A sample file for user <tt>bob</tt> could look like this:</p>
+<pre>
+#!/bin/sh
+/usr/bin/xen-create-image --hostname=bob \
+ --ip=192.168.1.1  \
+ --ip=192.168.1.2 \
+ --size=9.5G \
+ --swap=512M
+ --mem=256M \
+ --force
+</pre>
+      <p>This will require a correctly configured instance of <a href="/software/xen-tools/">xen-tools</a> and the <tt>sudoer</tt> file to contain the ability for the user to run <tt>xen-create-image</tt>.</p>
+</dd>
+</dl>
+        <p>Any remaining questions?  <a href="/contact/">contact the author</a>.</p>
+        </div>
+</div>    </div>
+
+    <!-- SIDEBAR -->
+		<h3 class="hide">Sidebar</h3>		
+	  <div class="sidebar sidebar-font">
+
+			<div class="sidebarbox-border bg-yellow03">
+        <div class="sidebarbox-title-shading bg-yellow07">Installation</div>
+	<p>A <a href="releases.html">Debian binary package</a> is available for Sarge.</p>
+    </div>
+    </div>
+	
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+		</div>		
+		
+    <!-- FOOTER -->
+		<h3 class="hide">Footer</h3>
+    <div class="footer footer-font">
+       Copyright &copy; 2006-2007 <a href="http://www.steve.org.uk/">Steve Kemp</a> | All Rights Reserved<br />
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Software for the Xen hypervisor" />
+  <meta name="keywords" content="xen,debian,xen-tools" />
+  <meta name="author" content="Steve Kemp" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+  <title>xen-tools.org - Xen Software: xen-tools</title>
+</head>
+
+<body>
+  <div id="page-container">
+
+  	<!-- HEADER -->
+    <!-- Global Navigation -->
+		<h3 class="hide">Global Navigation</h3>
+    <div class="nav-global-container">
+      <div class="nav-global nav-global-font">
+			  <ul>
+    	    <li><a href="/contact/">Contact</a></li>
+	    <li><a href="/sitemap.html">Site Map</a></li>
+        </ul>
+		  </div>
+    </div>				
+
+    <!-- Sitename and Banner -->
+		<div class="site-name">
+		Xen-Tools.org
+		</div>		 						
+		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
+		
+    <!-- Main Navigation -->										
+		<h3 class="hide">Top Navigation</h3>		
+    <div class="nav-main nav-main-font">			
+<!--#include virtual="/inc/top-menu.html" -->
+		</div>
+		
+  	<!-- Sub-Navigation -->
+		<h3 class="hide">Left Navigation</h3>
+		<div class="nav-sub nav-sub-font nav-sub-align">
+    <div class="buffer"></div>
+      <ul>
+        <li class="title">xen-tools</li>
+        <li class="group"><a href="/software/xen-tools/">Documentation</a></li>		
+        <li><a href="/software/xen-tools/">Introduction</a></li>
+	<li><a href="examples.html" class="selected">Examples</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="lists.html">Mailing lists</a></li>
+        <li><a href="bugs.html">Reporting Bugs</a></li>
+	<li><a href="upgrading.html">Upgrading</a></li>
+        <li class="group"><a href="releases.html">Download</a></li>
+        <li><a href="releases.html">Releases</a></li>
+        <li><a href="mercurial.html">Mercurial</a></li>
+      </ul>
+      <p></p>     
+    <div class="buffer"></div>
+<!-- google -->
+<p>&nbsp;</p>
+<p>Sponsored Links:</p>
+<div style="text-align: center;">
+<p></p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-1910202134166551";
+google_ad_width = 125;
+google_ad_height = 125;
+google_ad_format = "125x125_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- /google -->
+    </div>
+						
+    <!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar">						
+
+  	<!-- 	CONTENT -->
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+  	  <!-- Page title -->		
+		  <div class="content-pagetitle"></div>
+
+			
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Example Usage</div>
+        <div class="contentbox-noshading">
+	<p>There are several different ways that the <tt>xen-tools</tt> scripts can be used, so it is difficult to examine all possible usage scenarios.  Here will will concentrate upon the installation of Debian Sarge.</p>
+	<p>The basic default method of installing new Debian GNU/Linux instances is via the <a href="http://packages.debian.org/debootstrap">debootsrap package</a>, included as part of Debian.</p>
+
+        </div>
+      </div>					
+
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-blue07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Loopback Images</div>
+        <div class="contentbox-noshading">
+	<p>Using loopback images is very straightfoward, all you need to do to prepare is have a directory within which your new Xen guests will be located.  This directory should be specified upon the commandline when invoking <tt>xen-create-image</tt>.</p>
+	<p>Specifying the directory upon the command line would look like this:</p>
+<pre>
+xen-create-image --hostname=test.my.flat \
+  --ip=192.168.1.1 \
+  --dir=/home/xen \
+  --dist=sarge \
+</pre>
+<p>(<b>Note:</b> we didn't specify the installation method, or the Debian mirror to use here - we assume those are specified in the configuration file of <tt>/etc/xen-tools/xen-tools.conf</tt>.)</p>
+        <p>Once this command has finished you'll be left with the following layout:</p>
+<pre>
+/home/xen/
+`-- domains
+    `-- test.my.flat
+        |-- disk.img
+        `-- swap.img
+
+2 directories, 2 files
+</pre>
+        <p>Here you can see that there is a new sub-directory created called <tt>test.my.flat</tt>, which was the hostname of the new instance we created, and inside that we have two loopback images.</p>
+	<p>If you're creating several loopback domains you will soon exhaust the default number of loopback devices.  <a href="faq.html#5">Increase the number of loop devices for Xen</a>.</p>
+        </div>
+      </div>					
+
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-yellow07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">LVM Examples</div>
+        <div class="contentbox-noshading">
+	<p>Using LVM logical volumes is a much more efficient process than using the loopback files, however it does require that your host system has LVM setup.</p>
+	<p>To use the LVM option you specify <tt>--lvm=volume-group</tt> upon the command line.  This option conflicts with the <tt>--dir</tt> option described above.</p>
+	<p>A sample command would look like this:</p>
+<pre>
+xen-create-image --hostname=test.my.flat \
+  --ip=192.168.1.1 \
+  --lvm=vol1 \
+  --dist=sarge
+</pre>
+<p>(<b>Note:</b> Again we didn't specify all the options, assuming that they were defined in the configuration file.  As they are by default.)</p>
+        <p>Once this command has finished you will be able to see your new logical volumes included in the output of <tt>lvdisplay</tt>:</p>
+<pre>
+# lvdisplay -C
+  LV                    VG   Attr   LSize  Origin Snap%  Move Log Copy%
+  test.my.flat-disk  mine -wi-ao  4.00G
+  test.my.flat-swap  mine -wi-ao 20.00M
+</pre>
+<p>Here you see the two volumes, one used for the root disk, and one used for swap.</p>
+        </div>
+      </div>					
+    </div>
+
+    <!-- SIDEBAR -->
+		<h3 class="hide">Sidebar</h3>		
+	  <div class="sidebar sidebar-font">
+
+			<div class="sidebarbox-border bg-yellow03">
+        <div class="sidebarbox-title-shading bg-yellow07">Other Examples</div>
+	<p>More examples are available by viewing the manpage for <tt>xen-create-image</tt>.</p>
+      </div>												
+    </div>
+		
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+		</div>		
+		
+    <!-- FOOTER -->
+		<h3 class="hide">Footer</h3>
+    <div class="footer footer-font">
+       Copyright &copy; 2006-2007 <a href="http://www.steve.org.uk/">Steve Kemp</a> | All Rights Reserved<br />
+    </div>
+  </div>
+</body>
+</html>

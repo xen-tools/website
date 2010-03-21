@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Software for the Xen hypervisor" />
+  <meta name="keywords" content="xen,debian,xen-tools" />
+  <meta name="author" content="Steve Kemp" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+  <title>xen-tools.org - Xen Software: xen-shell commands</title>
+</head>
+
+<body>
+  <div id="page-container">
+
+  	<!-- HEADER -->
+    <!-- Global Navigation -->
+		<h3 class="hide">Global Navigation</h3>
+    <div class="nav-global-container">
+      <div class="nav-global nav-global-font">
+			  <ul>
+    	    <li><a href="/contact/">Contact</a></li>
+	    <li><a href="/sitemap.html">Site Map</a></li>
+        </ul>
+		  </div>
+    </div>				
+
+    <!-- Sitename and Banner -->
+		<div class="site-name">
+		Xen-Tools.org
+		</div>		 						
+		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
+		
+    <!-- Main Navigation -->										
+		<h3 class="hide">Top Navigation</h3>		
+    <div class="nav-main nav-main-font">			
+<!--#include virtual="/inc/top-menu.html" -->
+		</div>
+		
+  	<!-- Sub-Navigation -->
+		<h3 class="hide">Left Navigation</h3>
+		<div class="nav-sub nav-sub-font nav-sub-align">
+    <div class="buffer"></div>
+    <div class="buffer"></div>
+      <ul>
+        <li class="title">xen-shell</li>
+        <li class="group"><a href="/software/xen-shell/">Documentation</a></li>
+        <li><a href="/software/xen-shell/">Introduction</a></li>
+        <li><a href="/software/xen-shell/install.html">Installation</a></li>
+        <li><a href="/software/xen-shell/lists.html">Mailing lists</a></li>
+        <li><a href="/software/xen-shell/commands.html" class="selected">Shell Commands</a></li>
+        <li><a href="/software/xen-shell/faq.html">FAQ</a></li>
+        
+        <li class="group"><a href="/software/xen-shell/releases.html">Download</a></li>
+        <li><a href="/software/xen-shell/releases.html">Releases</a></li>
+        <li><a href="/software/xen-shell/mercurial.html">Mercurial</a></li>
+
+      </ul>
+      <p></p>
+    </div>
+						
+    <!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar">						
+
+  	<!-- 	CONTENT -->
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+  	  <!-- Page title -->		
+		  <div class="content-pagetitle"></div>
+
+			
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">xen-shell commands</div>
+        <div class="contentbox-noshading">
+<p>The xen shell has built in help and TAB completion so it should be fairly simple to use.</p>
+<p>Some commands have synonyms and in that case both are listed here even though the functionality doesn't change when the name changes.</p>
+<p>The currently available commands are:</p>
+<dl>
+<dt><b><tt>boot</tt></b></dt>
+<dd><p>This allows you to boot your Xen guest if it is currently shutdown.</p></dd>
+<dt><b><tt>bandwidth</tt></b></dt>
+<dd><p>This allows you to see the bandwidth a guest has used in a given period of time.</p></dd>
+<dt><b><tt>console</tt></b> / <b><tt>serial</tt></b></dt>
+<dd><p>These, identical, commands allow you to access your Xen guest's console, allowing you to login if your networking is broken, or if you've chosen to disable the OpenSSH server.</p></dd>
+<dt><b><tt>control [instance-name]</tt></b></dt>
+<dd><p>Since the v0.8 release of the xen-shell it is possible for an administrator to delegate control of multiple Xen guest systems to a single user.  (Prior to this release a user could only control a single system.)</p>
+<p>Each of the shell commands operate upon the currently selected Xen guest - and the <tt>control</tt> command allows you to specify which instance that is.</p>
+<p>If the user only has a single instance under their control then this command is disabled; and all operations are implicitly conducted upon their sole Xen guest.  Otherwise the <tt>list</tt> command will display guests the user may control.</p></dd>
+<dt><b><tt>exit</tt></b> / <b><tt>quit</tt></b></dt>
+<dd><p>These commands both exit the shell, saving any commands you might have entered into the <tt>~/.xen-shell</tt> history file.</p></dd>
+<dt><b><tt>list</tt></b></dt>
+<dd><p>This command will list all the available Xen instances you're allowed to control - for the case when there is more than one Xen guest available to you.</p>
+<p>If you only have one instance available this command will be disabled.</p></dd>
+<dt><b><tt>help</tt></b> [command1 command2]</dt>
+<dd><p>When invoked with no arguments the <tt>help</tt> command will show a list of available commands and a one-line description of them all.</p>
+<p>If you wish help on a specific command you can use "<tt>help command</tt>" to see more details.</p></dd>
+<dt><b><tt>passwd</tt></b></dt>
+<dd><p>If the client is connecting to the host system via OpenSSH using a plain text password then this command will allow them to change that password.</p>
+<p>The command is disabled/removed if the users home directory contains the file <tt>~/.ssh/authorized_keys</tt> - it is assumed this means key-based authentication is in use.</p></dd>
+<dt><b><tt>rdns</tt></b> [ip hostname]</dt>
+<dd><p>The <tt>rdns</tt> command allows you to either view your current reverse DNS settings, or update them.  Run <tt>rdns</tt> with no arguments to view your current setup, or run "<tt>rdns 1.2.3.4 foo.bar.com</tt>" to set the reverse DNS for the IP 1.2.3.4</p>
+<p><b>Note:</b> you can only set the reverse DNS for IPs which you control, which you'll find listed in the output of <tt>rdns</tt>.</p>
+<p>See the <a href="install.html">installation page</a> for what is required to implement this fully.</p>
+</dd>
+<dt><b><tt>reboot</tt></b></dt>
+<dd><p>This allows you to reboot your running Xen guest.</p></dd>
+<dt><b><tt>reimge</tt></b></dt>
+<dd><p>After prompting for confirmation, and counting down for ten seconds this command will <b>wipe</b> your Xen guest, and perform a fresh installation via the use of <a href="http://www.xen-tools.org/software/xen-tools">xen-tools</a>.</p>
+<p>See the <a href="install.html">installation page</a> for what is required to implement this fully.</p></dd>
+<dt><b><tt>shutdown [force]</tt></b></dt>
+<dd><p>This command will shutdown your currently running Xen guest.  It will remain shutdown until you issue a <tt>boot</tt> command.</p></dd>
+<dt><b><tt>status</tt></b></dt>
+<dd><p>This command shows you the current status of your Xen guest, which will either be "running/booted", or "shutdown".</p>
+<p>For information purposes it will also show you the <tt>uptime</tt> of the host system.</p></dd>
+<dt><b><tt>sysreq</tt></b></dt>
+<dd><p>This command allows you to send a "<a href="http://en.wikipedia.org/wiki/SysRq">sysreq</a>" command to a running Xen guest.</p></dd>
+<dt><b><tt>top</tt></b></dt>
+<dd><p>This command invokes the "top" display provided by the Xen monitor, allowing all guests to see their CPU/Memory/Network usage.</p></dd>
+<dt><b><tt>uptime</tt></b></dt>
+<dd><p>This command is similar to the <tt>status</tt> command and will show you the uptime of your Xen guest along with the uptime of the host system.</p></dd>
+<dt><b><tt>version</tt></b></dt>
+<dd><p>This shows you the version of the Xen shell which is comprised of the release number and the CVS revision identifier of the xen-shell.</p></dd>
+</dl>
+        </div>
+</div>    </div>
+
+    <!-- SIDEBAR -->
+		<h3 class="hide">Sidebar</h3>		
+	  <div class="sidebar sidebar-font">
+
+			<div class="sidebarbox-border bg-yellow03">
+        <div class="sidebarbox-title-shading bg-yellow07">Suggestions?</div>
+	<p>If you have an idea for a new command <a href="/contact/">please suggest it</a></p>
+        <p>Adding new commands is very simple, and I've love to hear suggestions.</p>
+    </div>
+    </div>
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+		</div>		
+		
+    <!-- FOOTER -->
+		<h3 class="hide">Footer</h3>
+    <div class="footer footer-font">
+       Copyright &copy; 2006-2007 <a href="http://www.steve.org.uk/">Steve Kemp</a> | All Rights Reserved<br />
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Software for the Xen hypervisor" />
+  <meta name="keywords" content="xen,debian,xen-tools" />
+  <meta name="author" content="Steve Kemp" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+  <title>xen-tools.org - Xen Software: xen-shell FAQ</title>
+</head>
+
+<body>
+  <div id="page-container">
+
+  	<!-- HEADER -->
+    <!-- Global Navigation -->
+		<h3 class="hide">Global Navigation</h3>
+    <div class="nav-global-container">
+      <div class="nav-global nav-global-font">
+			  <ul>
+    	    <li><a href="/contact/">Contact</a></li>
+	    <li><a href="/sitemap.html">Site Map</a></li>
+        </ul>
+		  </div>
+    </div>				
+
+    <!-- Sitename and Banner -->
+		<div class="site-name">
+		Xen-Tools.org
+		</div>		 						
+		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
+		
+    <!-- Main Navigation -->										
+		<h3 class="hide">Top Navigation</h3>		
+    <div class="nav-main nav-main-font">			
+<!--#include virtual="/inc/top-menu.html" -->
+		</div>
+		
+  	<!-- Sub-Navigation -->
+		<h3 class="hide">Left Navigation</h3>
+		<div class="nav-sub nav-sub-font nav-sub-align">
+    <div class="buffer"></div>
+    <div class="buffer"></div>
+      <ul>
+        <li class="title">xen-shell</li>
+        <li class="group"><a href="/software/xen-shell/">Documentation</a></li>
+        <li><a href="/software/xen-shell/">Introduction</a></li>
+        <li><a href="/software/xen-shell/install.html">Installation</a></li>
+        <li><a href="/software/xen-shell/lists.html">Mailing lists</a></li>
+        <li><a href="/software/xen-shell/commands.html">Shell Commands</a></li>
+        <li><a href="/software/xen-shell/faq.html" class="selected">FAQ</a></li>
+        <li class="group"><a href="/software/xen-shell/releases.html">Download</a></li>
+        <li><a href="/software/xen-shell/releases.html">Releases</a></li>
+        <li><a href="/software/xen-shell/mercurial.html">Mercurial</a></li>
+
+      </ul>
+      <p></p>
+<!-- google -->
+<p>&nbsp;</p>
+<p>Sponsored Links:</p>
+<div style="text-align: center;">
+<p></p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-1910202134166551";
+google_ad_width = 125;
+google_ad_height = 125;
+google_ad_format = "125x125_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- /google -->
+    </div>
+						
+    <!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar">						
+
+  	<!-- 	CONTENT -->
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+  	  <!-- Page title -->		
+		  <div class="content-pagetitle"></div>
+
+			
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Frequently Asked Questsion</div>
+        <div class="contentbox-noshading">
+	<p>This page answers to both frequently asked questions and frequently anticipated questions.</p>
+
+	<dl>
+        <dt id="a">1.  Software Requirements</dt>
+        <dd><p>To be installed upon your Xen host system you will need the following:</p>
+        <ul>
+        <li>Perl</li>
+        <li>The <tt>Term::Readline::GNU</tt> module.</li>
+        <li>GNU Screen</li>
+        <li>sudo</li>
+        </ul>
+        <p>There shouldn't be any other requirements, although the code will only be useful when running upon a Xen dom0 machine.  Note however that several features will be disabled if commands are not detected upon the host machine.</p>
+        </dd>
+        <dt id="b">2. I keep getting errors "User doesn't have a Xen guest"</dt>
+        <dd><p>The intention of the Xen shell is that it will allow a user to fully control one or more xen guests.</p>
+        <p>Xen configuration files are located beneath the directory <tt>/etc/xen</tt> and may have any name.  (Generally the configuration files are named after the hostname the instance would have once booted.)</p>
+        <p>To specify which local user can control a particular Xen guest you have two options:</p>
+<ul>
+<li>Add to the configuration file "name = 'login'".  This will allow the user with the login name "login" to control this instance.</li>
+<li>Add "xen_shell = 'steve,bob,chris,paul'" this will allow the four local users steve, bob, chris &amp; paul to control the specified instance.</li>
+</ul>
+        <p>So to allow the local user <tt>skx</tt> to control a Xen instance you could either ensure that the configuration file contains:</p>
+<pre>
+name = "skx"
+</pre>
+<p><i>Or</i> you could give it an appropriate name and add the following:</p>
+<pre>
+name = "builder.my.flat"
+
+xen_shell = "skx"
+</pre>
+        </dd>
+
+        <dt id="c">3.  Immediate Disconnection on Login</dt>
+        <dd><p>The <tt>xen-shell</tt> script will only work for users who "own" a Xen isntance, as discussed above, and for users who have sane usernames - which consist of characters "a-z", "0-9", and "_".</p>
+        <p>If either of these two tests fail then the connection will be closed, and if you're using a client such as PuTTY you might find the window closing before you can read the error message.</p>
+        <p>One solution in the case of problems is to login as root to the Xen host and run:</p>
+<pre>
+sudo su - USERNAME -s /bin/sh
+</pre>
+<p>(Where "USERNAME" is the user who is getting rejected, or kicked out upon connection).</p>
+<p>Once logged in as the releveant user try running "<tt>xen-login-shell</tt>", and "<tt>xen-shell</tt>" - any errors should then be visible.</p>
+</dd>
+        </dl>
+        <p>Any remaining questsion?  <a href="/contact/">contact the author</a>.</p>
+        </div>
+</div>    </div>
+
+    <!-- SIDEBAR -->
+		<h3 class="hide">Sidebar</h3>		
+	  <div class="sidebar sidebar-font">
+
+			<div class="sidebarbox-border bg-yellow03">
+        <div class="sidebarbox-title-shading bg-yellow07">xen-shell</div>
+	<p><tt>xen-shell</tt> is being used by my <a href="http://www.xen-hosting.org/">xen hosting</a> setup.</p>
+    </div>
+    </div>
+	
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+		</div>		
+		
+    <!-- FOOTER -->
+		<h3 class="hide">Footer</h3>
+    <div class="footer footer-font">
+       Copyright &copy; 2006-2007 <a href="http://www.steve.org.uk/">Steve Kemp</a> | All Rights Reserved<br />
+    </div>
+  </div>
+</body>
+</html>

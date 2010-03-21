@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Software for the Xen hypervisor" />
+  <meta name="keywords" content="xen,debian,xen-tools" />
+  <meta name="author" content="Steve Kemp" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+  <title>xen-tools.org - Xen Software: xen-tools</title>
+</head>
+
+<body>
+  <div id="page-container">
+
+  	<!-- HEADER -->
+    <!-- Global Navigation -->
+		<h3 class="hide">Global Navigation</h3>
+    <div class="nav-global-container">
+      <div class="nav-global nav-global-font">
+			  <ul>
+    	    <li><a href="/contact/">Contact</a></li>
+	    <li><a href="/sitemap.html">Site Map</a></li>
+        </ul>
+		  </div>
+    </div>				
+
+    <!-- Sitename and Banner -->
+		<div class="site-name">
+		Xen-Tools.org
+		</div>		 						
+		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
+		
+    <!-- Main Navigation -->										
+		<h3 class="hide">Top Navigation</h3>		
+    <div class="nav-main nav-main-font">			
+<!--#include virtual="/inc/top-menu.html" -->
+		</div>
+		
+  	<!-- Sub-Navigation -->
+		<h3 class="hide">Left Navigation</h3>
+		<div class="nav-sub nav-sub-font nav-sub-align">
+    <div class="buffer"></div>
+      <ul>
+        <li class="title">xen-tools</li>
+        <li class="group"><a href="/software/xen-tools/">Documentation</a></li>		
+        <li><a href="/software/xen-tools/" class="selected">Introduction</a></li>
+	<li><a href="examples.html">Examples</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="lists.html">Mailing lists</a></li>
+        <li><a href="bugs.html">Reporting Bugs</a></li>
+	<li><a href="upgrading.html">Upgrading</a></li>
+        <li class="group"><a href="releases.html">Download</a></li>
+        <li><a href="releases.html">Releases</a></li>
+        <li><a href="mercurial.html">Mercurial</a></li>
+      </ul>
+      <p></p>     
+    <div class="buffer"></div>
+
+
+<!-- google -->
+<p>&nbsp;</p>
+<p>Sponsored Links:</p>
+<div style="text-align: center;">
+<p></p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-1910202134166551";
+google_ad_width = 125;
+google_ad_height = 125;
+google_ad_format = "125x125_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- /google -->
+    </div>
+						
+    <!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar">						
+
+  	<!-- 	CONTENT -->
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+  	  <!-- Page title -->		
+		  <div class="content-pagetitle"></div>
+
+			
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Xen Tools</div>
+        <div class="contentbox-noshading">
+	<p>xen-tools is a collection of simple perl scripts which allow you to easily create new guest Xen domains upon your Debian GNU/Linux host.</p>
+	<p>Once installed and configured you can create a new Xen instance in a matter of minutes.  Each new Xen domain will be complete with:</p>
+	<ul>
+	<li>All networking details setup, with either multiple static IP addresses or DHCP.</li>
+	<li>An installation of OpenSSH.</li>
+        <li>An arbitary set of partitions.</li>
+	</ul>
+	<p>Your new instance will be completed by having the user accounts from your guest system copied over, and you may optionally boot the image as soon as it has been created.</p>
+        </div>
+      </div>					
+
+			<div class="contentbox-container-left">
+			  <div class="contentbox-title-shading bg-blue07 box-on">&nbsp;</div>
+			  <div class="contentbox-title-shading">Installation Methods</div>
+        <div class="contentbox-noshading">
+          <p>Mutiple installation methods are supported to increase your choices.  You can choose to:</p>
+	  <ul>
+	  <li>Install via <tt>debootstrap</tt></li>
+	  <li>Install via <tt>rpmstrap</tt></li>
+	  <li>Copy a previously created image.</li>
+	  <li>Untar an archive of a pristine image.</li>
+	  </ul>
+       </div>
+      </div>
+
+			<div class="contentbox-container-right">
+			  <div class="contentbox-title-shading bg-green07 box-on">&nbsp;</div>
+			  <div class="contentbox-title-shading">Flexibility</div>
+        <div class="contentbox-noshading">
+	<p>Because the creation of new instance is very modular there are very few dependencies, and adding new flavours of GNU/Linux to install should be very simple.</p>
+	<p>Please <a href="faq.html">read the FAQ</a> for more details.</p>
+        </div>
+</div>
+    </div>
+
+    <!-- SIDEBAR -->
+		<h3 class="hide">Sidebar</h3>		
+	  <div class="sidebar sidebar-font">
+
+			<div class="sidebarbox-border bg-yellow03">
+        <div class="sidebarbox-title-shading bg-yellow07">xen-tools</div>
+	<p>xen-tools was originally only capable of installing Debian guests, now it supports CentOS4 too!</p>
+      </div>												
+
+			<div class="sidebarbox-border bg-blue02">
+        <div class="sidebarbox-title-shading bg-blue05 txt-white">Origin</div>
+	<p>Originally a quick hack written to accompany <a href="http://www.debian-administration.org/articles/304">an introduction to Xen</a> the software has proved useful and popular.</p>
+      </div>												
+    </div>
+		
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+		</div>		
+		
+    <!-- FOOTER -->
+		<h3 class="hide">Footer</h3>
+    <div class="footer footer-font">
+       Copyright &copy; 2006-2007 <a href="http://www.steve.org.uk/">Steve Kemp</a> | All Rights Reserved<br />
+    </div>
+  </div>
+</body>
+</html>

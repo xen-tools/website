@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Software for the Xen hypervisor" />
+  <meta name="keywords" content="xen,debian,xen-tools" />
+  <meta name="author" content="Steve Kemp" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+  <title>xen-tools.org - Xen Software: xen-shell</title>
+</head>
+
+<body>
+  <div id="page-container">
+
+  	<!-- HEADER -->
+    <!-- Global Navigation -->
+		<h3 class="hide">Global Navigation</h3>
+    <div class="nav-global-container">
+      <div class="nav-global nav-global-font">
+			  <ul>
+    	    <li><a href="/contact/">Contact</a></li>
+	    <li><a href="/sitemap.html">Site Map</a></li>
+        </ul>
+		  </div>
+    </div>				
+
+    <!-- Sitename and Banner -->
+		<div class="site-name">
+		Xen-Tools.org
+		</div>		 						
+		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
+		
+    <!-- Main Navigation -->										
+		<h3 class="hide">Top Navigation</h3>		
+    <div class="nav-main nav-main-font">			
+<!--#include virtual="/inc/top-menu.html" -->
+		</div>
+		
+  	<!-- Sub-Navigation -->
+		<h3 class="hide">Left Navigation</h3>
+		<div class="nav-sub nav-sub-font nav-sub-align">
+    <div class="buffer"></div>
+    <div class="buffer"></div>
+      <ul>
+        <li class="title">xen-shell</li>
+        <li class="group"><a href="/software/xen-shell/">Documentation</a></li>
+        <li><a href="/software/xen-shell/" class="selected">Introduction</a></li>
+        <li><a href="/software/xen-shell/install.html">Installation</a></li>
+        <li><a href="/software/xen-shell/lists.html">Mailing lists</a></li>
+        <li><a href="/software/xen-shell/commands.html">Shell Commands</a></li>
+        <li><a href="/software/xen-shell/faq.html">FAQ</a></li>
+        <li class="group"><a href="/software/xen-shell/releases.html">Download</a></li>
+        <li><a href="/software/xen-shell/releases.html">Releases</a></li>
+        <li><a href="/software/xen-shell/mercurial.html">Mercurial</a></li>
+
+      </ul>
+      <p></p>
+
+<!-- google -->
+<p>&nbsp;</p>
+<p>Sponsored Links:</p>
+<div style="text-align: center;">
+<p></p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-1910202134166551";
+google_ad_width = 125;
+google_ad_height = 125;
+google_ad_format = "125x125_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- /google -->
+    </div>
+						
+    <!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar">						
+
+  	<!-- 	CONTENT -->
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+  	  <!-- Page title -->		
+		  <div class="content-pagetitle"></div>
+
+			
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">xen-shell</div>
+        <div class="contentbox-noshading">
+        <p>The Xen shell is a simple console application which allows you to easily allow a user to control multiple Xen instances, without the overhead of a web-based control panel.</p>
+<p>Using this shell users may:</p>
+<ul>
+<li>Boot/Shutdown their Xen guest.</li>
+<li>Reboot their Xen guest.</li>
+<li>Connect to the serial console of their runing Xen guest.</li>
+<li>Reimage their system to a pristine state, via <a href="/software/xen-tools/">xen-tools</a>.</li>
+<li>Manipulate their reverse DNS information</li>
+<li>Change their login password.</li>
+</ul>
+<br />
+     <p>The shell features command history, command completion, and integrated help.</p>
+     <p>It is ideal for a hosting company which wishes to offer Xen-based "virtual machine" to clients.   By using the xen-shell clients can maintain their own instance, without needing to ask for support staff to reboot/shutdown, or otherwise maintain the runnings system.</p>
+     <p>Security is improved since the client cannot gain access to the host system, and can only control <i>their</i> instance, and not those belonging to other clients.</p>
+        </div>
+      </div>					
+
+
+			<div class="contentbox-container-left">
+			  <div class="contentbox-title-shading bg-blue07 box-on">&nbsp;</div>
+			  <div class="contentbox-title-shading">Reimaging Support</div>
+        <div class="contentbox-noshading">
+        <p>If your users get into a muddle, or wish to otherwise "scrap" their Xen instance you can take advantage of the built-in reimaging support to allow them to reset their Xen instance to a pristine/new state.</p>
+        <p>This support relies upon a working installation of <a href="/software/xen-tools">xen-tools</a>.</p>
+       </div>
+      </div>
+
+			<div class="contentbox-container-right">
+			  <div class="contentbox-title-shading bg-green07 box-on">&nbsp;</div>
+			  <div class="contentbox-title-shading">Reverse DNS</div>
+        <div class="contentbox-noshading">
+        <p>The xen-shell has integrated support for allowing users to manipulate their reverse DNS.</p>
+        <p>This support isn't tied to a particular DNS server, since it only manipulates simple text files, but it does allow a lot of flexability.</p>
+        </div>
+</div>    </div>
+
+    <!-- SIDEBAR -->
+		<h3 class="hide">Sidebar</h3>		
+	  <div class="sidebar sidebar-font">
+
+			<div class="sidebarbox-border bg-red03">
+        <div class="sidebarbox-title-shading bg-red01">Source Change</div>
+	<p><tt>xen-shell</tt> is now being maintained via mercurial not CVS.</p>
+    </div>
+    </div>
+
+	  <div class="sidebar sidebar-font">
+
+			<div class="sidebarbox-border bg-yellow03">
+        <div class="sidebarbox-title-shading bg-yellow07">xen-shell</div>
+	<p><tt>xen-shell</tt> is being used by my <a href="http://www.xen-hosting.org/">xen hosting</a> setup.</p>
+    </div>
+    </div>
+	
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+		</div>		
+		
+    <!-- FOOTER -->
+		<h3 class="hide">Footer</h3>
+    <div class="footer footer-font">
+       Copyright &copy; 2006-2007 <a href="http://www.steve.org.uk/">Steve Kemp</a> | All Rights Reserved<br />
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Software for the Xen hypervisor" />
+  <meta name="keywords" content="xen,debian,xen-tools" />
+  <meta name="author" content="Steve Kemp" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+  <title>xen-tools.org - Xen Software: xen-tools</title>
+</head>
+
+<body>
+  <div id="page-container">
+
+  	<!-- HEADER -->
+    <!-- Global Navigation -->
+		<h3 class="hide">Global Navigation</h3>
+    <div class="nav-global-container">
+      <div class="nav-global nav-global-font">
+			  <ul>
+    	    <li><a href="/contact/">Contact</a></li>
+	    <li><a href="/sitemap.html">Site Map</a></li>
+        </ul>
+		  </div>
+    </div>				
+
+    <!-- Sitename and Banner -->
+		<div class="site-name">
+		Xen-Tools.org
+		</div>		 						
+		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
+		
+    <!-- Main Navigation -->										
+		<h3 class="hide">Top Navigation</h3>		
+    <div class="nav-main nav-main-font">			
+<!--#include virtual="/inc/top-menu.html" -->
+		</div>
+		
+  	<!-- Sub-Navigation -->
+		<h3 class="hide">Left Navigation</h3>
+		<div class="nav-sub nav-sub-font nav-sub-align">
+    <div class="buffer"></div>
+      <ul>
+        <li class="title">xen-tools</li>
+        <li class="group"><a href="/software/xen-tools/">Documentation</a></li>		
+        <li><a href="/software/xen-tools/">Introduction</a></li>
+	<li><a href="examples.html">Examples</a></li>
+        <li><a href="faq.html" class="selected">FAQ</a></li>
+	<li><a href="lists.html">Mailing lists</a></li>
+        <li><a href="bugs.html">Reporting Bugs</a></li>
+	<li><a href="upgrading.html">Upgrading</a></li>
+        <li class="group"><a href="releases.html">Download</a></li>
+        <li><a href="releases.html">Releases</a></li>
+        <li><a href="mercurial.html">Mercurial</a></li>
+      </ul>
+      <p></p>     
+    <div class="buffer"></div>
+
+<!-- google -->
+<p>&nbsp;</p>
+<p>Sponsored Links:</p>
+<div style="text-align: center;">
+<p></p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-1910202134166551";
+google_ad_width = 125;
+google_ad_height = 125;
+google_ad_format = "125x125_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- /google -->
+    </div>
+						
+    <!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar">						
+
+  	<!-- 	CONTENT -->
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+  	  <!-- Page title -->		
+		  <div class="content-pagetitle"></div>
+
+			
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Frequently Asked Questions</div>
+        <div class="contentbox-noshading">
+	<p>This page answers to both frequently asked questions and frequently anticipated questions.</p>
+
+	<dl>
+	<dt id="1">1.  Software Requirements</dt>
+	<dd><p>The software requirements should be portable across both Debian Stable, and Unstable distributions.</p>
+	<p>The scripts require:</p>
+	<ul>
+	<li>The <tt>rpmstrap</tt> tool if you wish to install RPM based distributions</li>
+	<li>The <tt>debootstrap</tt> tool if you wish to install Debian-based distributions</li>
+	<li>Perl.</li>
+    <li>The <a href="http://search.cpan.org/~mjd/Text-Template-1.44/">Text::Template</a> Perl module</li>
+    <li>The <a href="http://search.cpan.org/~wadg/Config-IniFiles-2.38/">Config::IniFiles</a> Perl module.</li>
+	<li>GNU Bash</li>
+	</ul></dd>
+
+	<dt id="2">2.  Supported Distributions</dt>
+	<dd><p>The distributions which may currently be created are Debian GNU/Linux Sid, Sarge, Etch, and CentOS4.</p>
+	<p>Adding new distributions will involve finding a method to install the software image, and writing some scripts to configure the new installation.</p>
+	</dd>
+
+	<dt id="3">3.  How are new images installed?</dt>
+	<dd><p>The installation is most typically done using the standard <tt>debootstrap</tt> tool, however several alternatives are availble for installing non-Debian distributions such as Gentoo GNU/Linux.</p>
+	<p>The simplest method is to install the desired operating system in a new partition, then use the <tt>--copy</tt> argument to install a new copy of this distribution by simply recursively copying the installed files from the real image.</p>
+	<p>Alternatively you could use <tt>tar</tt> to archive the installation directories of another distribution, and then "install" that distribution with the <tt>--tar</tt> argument.</p>
+	</dd>
+
+	<dt id="4">4.  How are new installations configured?</dt>
+	<dd><p>For each distribution which is supported there is a directory of shell scripts which is responsible for conducting the configuration.  These are known as the "hooks".</p>
+	<p>To add a new distribution create a directory <tt>/usr/lib/xen-tools/<b>name</b>.d/</tt>.  When it comes to configuration time each script in this directory will be executed (in sorted order) with the path to the new installations root directory.</p>
+	<p>As an example of what you can do please consult the existing hooks - and consider contributing your own scripts to be included in the next release.</p>
+
+	<dt id="5">5. How do I use more loop devices?</dt>
+	<dd><p>If you're using loopback images to store your Xen guest domains you will almost certainly exhaust the default number of loopback images your distribution has created.  (This is typically just eight!)</p>
+	<p>There are two things you must do to change this.  Firstly you must specify the number of devices to use when loading the <tt>loop</tt> module.</p>
+<pre>
+echo 'options loop max_loop=255' &gt; /etc/modprobe.d/loop.local
+</pre>
+        <p>Now you need to ensure that you have the actual devices in the <tt>/dev</tt> directory on your host:</p>
+<pre>
+for i in $(seq 8 255) ;  do mknod /dev/loop$i b 7 $i ;done
+chmod 664 /dev/loop* 
+chown 0.disk /dev/loop*
+</pre>
+
+	<dt id="6">6. How can I alter what is written to the Xen configuration file?</dt>
+	<dd><p>When a new image is created a configuration file for Xen will be automatically created in the <tt>/etc/xen</tt> directory.  The new configuration file will be named "hostname.cfg", so far example the host <tt>test.my.flat</tt> will have a configuration file created called <tt>/etc/xen/test.my.flat.cfg</tt>.</p>
+	<p>If you wish to modify the information which is written here by default you should adjust the template which is used to generate those files.  The template file is <tt>/etc/xen-tools/xm.tmpl</tt> - and this is processed to create the configuration file.</p>
+	<p>The contents should be fairly obvious, but feel free to <a href="lists.html">ask for help</a> if you need to make changes and cannot do so.</p></dd>
+	
+	</dd>
+
+	</dl>
+
+        </div>
+      </div>					
+    </div>
+
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+		</div>		
+		
+    <!-- FOOTER -->
+		<h3 class="hide">Footer</h3>
+    <div class="footer footer-font">
+       Copyright &copy; 2006-2007 <a href="http://www.steve.org.uk/">Steve Kemp</a> | All Rights Reserved<br />
+    </div>
+  </div>
+</body>
+</html>

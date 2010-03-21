@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Software for the Xen hypervisor" />
+  <meta name="keywords" content="xen,debian,xen-tools" />
+  <meta name="author" content="Steve Kemp" />
+  <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+  <title>xen-tools.org - Xen Software: xen-tools</title>
+</head>
+
+<body>
+  <div id="page-container">
+
+  	<!-- HEADER -->
+    <!-- Global Navigation -->
+		<h3 class="hide">Global Navigation</h3>
+    <div class="nav-global-container">
+      <div class="nav-global nav-global-font">
+			  <ul>
+    	    <li><a href="/contact/">Contact</a></li>
+	    <li><a href="/sitemap.html">Site Map</a></li>
+        </ul>
+		  </div>
+    </div>				
+
+    <!-- Sitename and Banner -->
+		<div class="site-name">
+		Xen-Tools.org
+		</div>		 						
+		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
+		
+    <!-- Main Navigation -->										
+		<h3 class="hide">Top Navigation</h3>		
+    <div class="nav-main nav-main-font">			
+<!--#include virtual="/inc/top-menu.html" -->
+		</div>
+		
+  	<!-- Sub-Navigation -->
+		<h3 class="hide">Left Navigation</h3>
+		<div class="nav-sub nav-sub-font nav-sub-align">
+    <div class="buffer"></div>
+
+      <ul>
+        <li class="title">xen-tools</li>
+        <li class="group"><a href="/software/xen-tools/">Documentation</a></li>		
+        <li><a href="/software/xen-tools/">Introduction</a></li>
+	<li><a href="examples.html">Examples</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="lists.html">Mailing lists</a></li>
+        <li><a href="bugs.html">Reporting Bugs</a></li>
+	<li><a href="upgrading.html"  class="selected">Upgrading</a></li>
+        <li class="group"><a href="releases.html">Download</a></li>
+        <li><a href="releases.html">Releases</a></li>
+        <li><a href="mercurial.html">Mercurial</a></li>
+      </ul>
+      <p></p>     
+    <div class="buffer"></div>
+
+
+
+<!-- google -->
+<p>&nbsp;</p>
+<p>Sponsored Links:</p>
+<div style="text-align: center;">
+<p></p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-1910202134166551";
+google_ad_width = 125;
+google_ad_height = 125;
+google_ad_format = "125x125_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<!-- /google -->
+    </div>
+						
+    <!-- WRAP CONTENT AND SIDEBAR -->
+    <div class="container-content-sidebar">						
+
+  	<!-- 	CONTENT -->
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+  	  <!-- Page title -->		
+		  <div class="content-pagetitle"></div>
+
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Upgrading to v3.2</div>
+        <div class="contentbox-noshading">
+	<p>From the v3.2 release onwards the handling of the installation type has changed.  The following options are no longer supported:</p>
+<ul>
+<li>--debootstrap</li>
+<li>--copy</li>
+<li>--rpmstrap</li>
+<li>--tar</li>
+</ul>
+        <p>Instead of these methods two new command line flags have been added:</p>
+<dl>
+<dt><tt>--install-method</tt></dt>
+<dd><p>This flag will now specify the installation type.  Valid options are:</p>
+<p>&quot;--install-method = copy</tt>&quot; This installs by copying a source directory recursively.</p>
+<p>&quot;--install-method = debootstrap</tt>&quot; This installs with debootstrap.</p>
+<p>&quot;--install-method = rpmstrap</tt>&quot; This installs with <tt>rpmstrap</tt>.</p>
+<p>&quot;--install-method = tar</tt>&quot; This installs by untarring a file.</p>
+</dd>
+<dt><tt>--install-source</tt></dt>
+<dd><p>For the two installation methods which require a source (<tt>copy</tt> &amp; <tt>tar</tt>) this option will be used to specify that source.</p></dd>
+</dl>
+<p>For example to install a guest by unpacking a tarfile the following is <b>not</b> vaid:</p>
+<pre>
+xen-create-image --tar=/tmp/tar.tar ...
+</pre>
+<p>Instead you should use:</p>
+<pre>
+xen-create-image --install-source=tar \ 
+  --install-source=/tmp/tar.tar ...
+</pre>
+        </div>
+      </div>					
+			
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Upgrading from v1.x -&gt; v2.x</div>
+        <div class="contentbox-noshading">
+	<p>During the course of development several earlier mistakes were corrected, to make the software easier to develop, maintain, and extend.</p>
+	<p>This is mostly gone unnoticed, but several things <i>have</i> changed under the hood.  This page contains a list of such changes.</p>
+        </div>
+      </div>					
+
+
+<div class="contentbox-container-full">
+ <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+  <div class="contentbox-title-shading">Command Line Changes</div>
+<p>The most obvious change to the <tt>xen-create-image</tt> script is the way in which command line arguments are handled.  This is because this script is now mostly a wrapper around several other tools (see below for details).</p>
+<p>There are two significant changes:</p>
+<ul>
+<li>The <tt>--volume</tt> argument has been renamed to <tt>--lvm</tt>.</li>
+<li>The <tt>--debug</tt> argument has been replaced by <tt>--verbose</tt>.</li>
+</ul>
+<p>The other difference in the 2.x release is that multiple static IP addresses are allowd.  Simple repeast <tt>--ip xx.xx.xx.xx</tt> for each static IP address you wish to allocate.</p>
+<p>(When specifying multiple IP addresses the first one specified is the primary one; the remainder are added as aliases.)</p>
+</div>
+
+
+<div class="contentbox-container-full">
+ <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+  <div class="contentbox-title-shading">Script Changes</div>
+<p>In previous releases the <tt>xen-create-image</tt> script was a large monolithic script which was hard to modify, and hard to extend.</p>
+<p>This has changed to make the code easier to manage, and make extending it easier.  This is one reason why the new installation methods specified by <tt>--copy</tt> and <tt>--tar</tt> were so easy to add.</p>
+<p>The new system removes 95% of the creation logic from the <tt>xen-create-image</tt> script.  Instead it parses options, performs sanity checking, and invokes some helper applications to do the work:</p>
+<ul>
+<li><tt>xt-install-image</tt> - This script installs Linux, by several available methods.</li>
+<li><tt>xt-customize-image</tt> - This script invokes the hook scripts to actually customize the installation, to setup networking etc.</li>
+<li><tt>xt-create-xen-config</tt> - This small script creates the Xen configuration file in <tt>/etc/xen</tt>.</li>
+</ul>
+<p>(The <tt>xt-</tt> prefix is shorthand for <tt>xen-tools</tt>.)</p>
+</div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+		<h3 class="hide">Sidebar</h3>		
+	  <div class="sidebar sidebar-font">
+
+			<div class="sidebarbox-border bg-yellow03">
+        <div class="sidebarbox-title-shading bg-yellow07">More details ..</div>
+	<p>More details of changes can be found in the changelog included in the download.</p>
+      </div>												
+    </div>
+		
+    <!-- END WRAP CONTENT AND SIDEBAR -->
+		</div>		
+		
+    <!-- FOOTER -->
+		<h3 class="hide">Footer</h3>
+    <div class="footer footer-font">
+       Copyright &copy; 2006-2007 <a href="http://www.steve.org.uk/">Steve Kemp</a> | All Rights Reserved<br />
+    </div>
+  </div>
+</body>
+</html>
