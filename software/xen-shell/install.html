@@ -21,7 +21,7 @@
 			  <ul>
 	    <li><a href="/contact/">Contact</a></li>
 	    <li><a href="/sitemap.html">Site Map</a></li>
-        </ul>
+	</ul>
 		  </div>
     </div>
 
@@ -43,16 +43,16 @@
     <div class="buffer"></div>
     <div class="buffer"></div>
       <ul>
-        <li class="title">xen-shell</li>
-        <li class="group"><a href="/software/xen-shell/">Documentation</a></li>
-        <li><a href="/software/xen-shell/">Introduction</a></li>
-        <li><a href="/software/xen-shell/install.html" class="selected">Installation</a></li>
-        <li><a href="/software/xen-shell/lists.html">Mailing lists</a></li>
-        <li><a href="/software/xen-shell/commands.html">Shell Commands</a></li>
-        <li><a href="/software/xen-shell/faq.html">FAQ</a></li>
-        <li class="group"><a href="/software/xen-shell/releases.html">Download</a></li>
-        <li><a href="/software/xen-shell/releases.html">Releases</a></li>
-        <li><a href="/software/xen-shell/mercurial.html">Mercurial</a></li>
+	<li class="title">xen-shell</li>
+	<li class="group"><a href="/software/xen-shell/">Documentation</a></li>
+	<li><a href="/software/xen-shell/">Introduction</a></li>
+	<li><a href="/software/xen-shell/install.html" class="selected">Installation</a></li>
+	<li><a href="/software/xen-shell/lists.html">Mailing lists</a></li>
+	<li><a href="/software/xen-shell/commands.html">Shell Commands</a></li>
+	<li><a href="/software/xen-shell/faq.html">FAQ</a></li>
+	<li class="group"><a href="/software/xen-shell/releases.html">Download</a></li>
+	<li><a href="/software/xen-shell/releases.html">Releases</a></li>
+	<li><a href="/software/xen-shell/mercurial.html">Mercurial</a></li>
 
       </ul>
     </div>
@@ -71,8 +71,8 @@
 			<div class="contentbox-container-full">
 			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
 				<div class="contentbox-title-shading">Installing &amp; using the Xen-Shell</div>
-        <div class="contentbox-noshading">
-        <p>This shell makes several assumptions in the way that it operates:</p>
+	<div class="contentbox-noshading">
+	<p>This shell makes several assumptions in the way that it operates:</p>
 <ul>
 <li>That you have a Xen 3.x host running.</li>
 <li>Then Xen host has several guests running.</li>
@@ -123,21 +123,21 @@ Cmnd_Alias   XEN      = /usr/sbin/xm
 Cmnd_Alias   XENIMG   = /usr/bin/xen-create-image
 XENUSERS     ALL      = NOPASSWD: XEN,XENIMG
 </pre>
-        <p><b>Note:</b> you only need to grant the ability to run <tt>xen-create-image</tt> if you wish to enable reimaging support in the shell.</p>
+	<p><b>Note:</b> you only need to grant the ability to run <tt>xen-create-image</tt> if you wish to enable reimaging support in the shell.</p>
 </dd>
 <dt>DNS Updates</dt>
 <dd><p>When the shell starts it will look for the file <tt>ips.txt</tt> in the home directory of the user who connects.  If that file doesn't exist then the <tt>rdns</tt> command will be disabled.</p>
-        <p>If you wish to allow users to control their reverse DNS create that file and give it contents such as these:</p>
+	<p>If you wish to allow users to control their reverse DNS create that file and give it contents such as these:</p>
 <pre>
 192.168.1.1 foo.my.domain
 192.168.1.2 bar.my.domain
 </pre>
-        <p>This file will be updated by the user when they invoke the <tt>rdns</tt> command.  It is up to you to read the files and create the corresponding zonefiles / DNS updates.  The shell will only manipulate the file - not push DNS updates itself.</p>
+	<p>This file will be updated by the user when they invoke the <tt>rdns</tt> command.  It is up to you to read the files and create the corresponding zonefiles / DNS updates.  The shell will only manipulate the file - not push DNS updates itself.</p>
 </dd>
 <dt>Reimaging Support</dt>
 <dd><p>If a user connects to the shell and has the executable file <tt>image.sh</tt> in their home directory the <tt>reimage</tt> command will be enabled.</p>
-        <p>When the user invokes the command the <tt>image.sh</tt> script is executed after prompting for confirmation, and performing a last-chance count-down.</p>
-        <p>It is up to you to create and configure this script to do the right thing.  A sample file for user <tt>bob</tt> could look like this:</p>
+	<p>When the user invokes the command the <tt>image.sh</tt> script is executed after prompting for confirmation, and performing a last-chance count-down.</p>
+	<p>It is up to you to create and configure this script to do the right thing.  A sample file for user <tt>bob</tt> could look like this:</p>
 <pre>
 #!/bin/sh
 /usr/bin/xen-create-image --hostname=bob \
@@ -151,8 +151,8 @@ XENUSERS     ALL      = NOPASSWD: XEN,XENIMG
       <p>This will require a correctly configured instance of <a href="/software/xen-tools/">xen-tools</a> and the <tt>sudoer</tt> file to contain the ability for the user to run <tt>xen-create-image</tt>.</p>
 </dd>
 </dl>
-        <p>Any remaining questions?  <a href="/contact/">contact the author</a>.</p>
-        </div>
+	<p>Any remaining questions?  <a href="/contact/">contact the author</a>.</p>
+	</div>
 </div>    </div>
 
     <!-- SIDEBAR -->
@@ -160,7 +160,7 @@ XENUSERS     ALL      = NOPASSWD: XEN,XENIMG
 	  <div class="sidebar sidebar-font">
 
 			<div class="sidebarbox-border bg-yellow03">
-        <div class="sidebarbox-title-shading bg-yellow07">Installation</div>
+	<div class="sidebarbox-title-shading bg-yellow07">Installation</div>
 	<p>A <a href="releases.html">Debian binary package</a> is available for Sarge.</p>
     </div>
     </div>

@@ -21,7 +21,7 @@
 			  <ul>
 	    <li><a href="/contact/">Contact</a></li>
 	    <li><a href="/sitemap.html">Site Map</a></li>
-        </ul>
+	</ul>
 		  </div>
     </div>
 
@@ -43,14 +43,14 @@
     <div class="buffer"></div>
     <div class="buffer"></div>
       <ul>
-        <li class="title">rinse</li>
-        <li class="group"><a href="/software/rinse/">Documentation</a></li>
-        <li><a href="/software/rinse/">Introduction</a></li>
-        <li><a href="/software/rinse/lists.html">Mailing lists</a></li>
-        <li><a href="/software/rinse/faq.html" class="selected">FAQ</a></li>
-        <li class="group"><a href="/software/rinse/releases.html">Download</a></li>
-        <li><a href="/software/rinse/releases.html">Releases</a></li>
-        <li><a href="/software/rinse/mercurial.html">Mercurial</a></li>
+	<li class="title">rinse</li>
+	<li class="group"><a href="/software/rinse/">Documentation</a></li>
+	<li><a href="/software/rinse/">Introduction</a></li>
+	<li><a href="/software/rinse/lists.html">Mailing lists</a></li>
+	<li><a href="/software/rinse/faq.html" class="selected">FAQ</a></li>
+	<li class="group"><a href="/software/rinse/releases.html">Download</a></li>
+	<li><a href="/software/rinse/releases.html">Releases</a></li>
+	<li><a href="/software/rinse/mercurial.html">Mercurial</a></li>
 
       </ul>
     </div>
@@ -69,41 +69,41 @@
 			<div class="contentbox-container-full">
 			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
 				<div class="contentbox-title-shading">Frequently Asked Questions</div>
-        <div class="contentbox-noshading">
+	<div class="contentbox-noshading">
 	<p>This page answers to both frequently asked questions and frequently anticipated questions.</p>
 
 	<dl>
 	<dt id="1">1.  Software Requirements</dt>
 	<dd><p>To use <tt>rinse</tt> you will need the following binaries installed upon your system:</p>
-        <ul>
-        <li>rpm &amp; rpm2cpio - To unpack the <tt>.rpm</tt> files.</li>
-        <li>wget - To download from remote servers.</li>
-        </ul>
-        <p>These should be readily available upon Debian/Debian-derived distributions via "<tt>apt-get install rpm</tt>".  Distributions which support the RPM format natively shouldn't have them installed already.</p>
-        </dd>
+	<ul>
+	<li>rpm &amp; rpm2cpio - To unpack the <tt>.rpm</tt> files.</li>
+	<li>wget - To download from remote servers.</li>
+	</ul>
+	<p>These should be readily available upon Debian/Debian-derived distributions via "<tt>apt-get install rpm</tt>".  Distributions which support the RPM format natively shouldn't have them installed already.</p>
+	</dd>
 
 	<dt id="2">2.  Supported Distributions</dt>
 	<dd><p>The distributions which may currently be created are:</p>
-        <ul>
-        <li>Centos 4 & 5..</li>
-        <li>Fedora Core 4, 5, 6, & 7.</li>
-        </ul>
-        <p>Each distribution is supported as both 32-bit/i386 and a 64-bit/AMD64 flavours.</p>
+	<ul>
+	<li>Centos 4 & 5..</li>
+	<li>Fedora Core 4, 5, 6, & 7.</li>
+	</ul>
+	<p>Each distribution is supported as both 32-bit/i386 and a 64-bit/AMD64 flavours.</p>
 	</dd>
 
 	<dt id="3">3.  How are these distributions installed?</dt>
-        <dd><p>The installation, or bootstrapping, of the new operating system occurs in two parts:  First the minimum number of packages required to create a working <tt>yum</tt> command re installed.  Then this newly installed copy of <tt>yum</tt> is used to install itself.</p>
-        <p>Why this two-step process?</p>
-        <p>Downloading the packages required to create a working <tt>yum</tt> command <i>should</i> be sufficient.  (For example any shared libraries, python libraries etc).  However if you stop there you'll end up with a minimal working system <b>but</b> the local yum+rpm databases will not match the packages which are actually installed.</p>
-        <p>The second stage "yum install yum" command ensures the local system has a consistant view of what is available locally.</p>
+	<dd><p>The installation, or bootstrapping, of the new operating system occurs in two parts:  First the minimum number of packages required to create a working <tt>yum</tt> command re installed.  Then this newly installed copy of <tt>yum</tt> is used to install itself.</p>
+	<p>Why this two-step process?</p>
+	<p>Downloading the packages required to create a working <tt>yum</tt> command <i>should</i> be sufficient.  (For example any shared libraries, python libraries etc).  However if you stop there you'll end up with a minimal working system <b>but</b> the local yum+rpm databases will not match the packages which are actually installed.</p>
+	<p>The second stage "yum install yum" command ensures the local system has a consistant view of what is available locally.</p>
 	</dd>
 
 	<dt id="4">4.  Does this mean packages are downloaded twice?</dt>
-        <dd><p>Yes.</p></dd>
+	<dd><p>Yes.</p></dd>
 
 
 	<dt id="5">5. What is required to use these installations?</dt>
-        <dd><p>If you were working upon a real machine, and you used this software to download into a partition for example, or you wanted to bootstrap a Xen guest there are several steps you must complete to end up with a working system:</P>
+	<dd><p>If you were working upon a real machine, and you used this software to download into a partition for example, or you wanted to bootstrap a Xen guest there are several steps you must complete to end up with a working system:</P>
 <ul>
 <li>Create/copy into place <tt>/etc/resolv.conf</tt>.</li>
 <li>Create/copy into place <tt>/etc/fstab</tt>.</li>
@@ -114,7 +114,7 @@
 
 	</dl>
 
-        </div>
+	</div>
       </div>
     </div>
     <!-- END WRAP CONTENT AND SIDEBAR -->
