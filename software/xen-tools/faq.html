@@ -23,27 +23,27 @@
 	    <li><a href="/sitemap.html">Site Map</a></li>
         </ul>
 		  </div>
-    </div>				
+    </div>
 
     <!-- Sitename and Banner -->
 		<div class="site-name">
 		Xen-Tools.org
-		</div>		 						
+		</div>
 		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
-		
-    <!-- Main Navigation -->										
-		<h3 class="hide">Top Navigation</h3>		
-    <div class="nav-main nav-main-font">			
+
+    <!-- Main Navigation -->
+		<h3 class="hide">Top Navigation</h3>
+    <div class="nav-main nav-main-font">
 <!--#include virtual="/inc/top-menu.html" -->
 		</div>
-		
+
   	<!-- Sub-Navigation -->
 		<h3 class="hide">Left Navigation</h3>
 		<div class="nav-sub nav-sub-font nav-sub-align">
     <div class="buffer"></div>
       <ul>
         <li class="title">xen-tools</li>
-        <li class="group"><a href="/software/xen-tools/">Documentation</a></li>		
+        <li class="group"><a href="/software/xen-tools/">Documentation</a></li>
         <li><a href="/software/xen-tools/">Introduction</a></li>
 	<li><a href="examples.html">Examples</a></li>
         <li><a href="faq.html" class="selected">FAQ</a></li>
@@ -54,22 +54,22 @@
         <li><a href="releases.html">Releases</a></li>
         <li><a href="mercurial.html">Mercurial</a></li>
       </ul>
-      <p></p>     
+      <p></p>
     <div class="buffer"></div>
 
     </div>
-						
+
     <!-- WRAP CONTENT AND SIDEBAR -->
-    <div class="container-content-sidebar">						
+    <div class="container-content-sidebar">
 
   	<!-- 	CONTENT -->
 		<h3 class="hide">Content</h3>
 		<div class="content content-font">
 
-  	  <!-- Page title -->		
+  	  <!-- Page title -->
 		  <div class="content-pagetitle"></div>
 
-			
+
 			<div class="contentbox-container-full">
 			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
 				<div class="contentbox-title-shading">Frequently Asked Questions</div>
@@ -114,7 +114,7 @@ echo 'options loop max_loop=255' &gt; /etc/modprobe.d/loop.local
         <p>Now you need to ensure that you have the actual devices in the <tt>/dev</tt> directory on your host:</p>
 <pre>
 for i in $(seq 8 255) ;  do mknod /dev/loop$i b 7 $i ;done
-chmod 664 /dev/loop* 
+chmod 664 /dev/loop*
 chown 0.disk /dev/loop*
 </pre>
 
@@ -122,18 +122,18 @@ chown 0.disk /dev/loop*
 	<dd><p>When a new image is created a configuration file for Xen will be automatically created in the <tt>/etc/xen</tt> directory.  The new configuration file will be named "hostname.cfg", so far example the host <tt>test.my.flat</tt> will have a configuration file created called <tt>/etc/xen/test.my.flat.cfg</tt>.</p>
 	<p>If you wish to modify the information which is written here by default you should adjust the template which is used to generate those files.  The template file is <tt>/etc/xen-tools/xm.tmpl</tt> - and this is processed to create the configuration file.</p>
 	<p>The contents should be fairly obvious, but feel free to <a href="lists.html">ask for help</a> if you need to make changes and cannot do so.</p></dd>
-	
+
 	</dd>
 
 	</dl>
 
         </div>
-      </div>					
+      </div>
     </div>
 
     <!-- END WRAP CONTENT AND SIDEBAR -->
-		</div>		
-		
+		</div>
+
     <!-- FOOTER -->
 		<h3 class="hide">Footer</h3>
     <div class="footer footer-font">
