@@ -1,0 +1,25 @@
+<xentitle>Xen Software: xen-shell source archive</xentitle>
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+	  <!-- Page title -->
+		  <div class="content-pagetitle"></div>
+
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Source Access</div>
+	<div class="contentbox-noshading">
+	<p>The <tt>xen-shell</tt> development occurs in a publically accessible mercurial repository from which you are welcome to follow ongoing development.</p>
+	<p>If you wish to following the development, or contribute patches, then this is the preferred thing to patch against:</p>
+	<ul>
+	<li><a href="http://xen-shell.repository.steve.org.uk/">xen-shell repository</a></li>
+	</ul>
+	<p>To pull the most current version, to track it, you would run something like this:</p>
+<pre>
+hg clone http://xen-shell.repository.steve.org.uk/
+</pre>
+	</div>
+</div>
+
+    </div>

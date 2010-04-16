@@ -1,61 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="description" content="Software for the Xen hypervisor" />
-  <meta name="keywords" content="xen,debian,xen-tools" />
-  <meta name="author" content="Steve Kemp" />
-  <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
-  <title>xen-tools.org - Sitemap</title>
-</head>
-
-<body>
-  <div id="page-container">
-
-	<!-- HEADER -->
-    <!-- Global Navigation -->
-		<h3 class="hide">Global Navigation</h3>
-    <div class="nav-global-container">
-      <div class="nav-global nav-global-font">
-			  <ul>
-			  <li><a href="/contact/">Contact</a></li>
-			  <li><a href="/sitemap.html">Site Map</a></li>
-			  </ul>
-		  </div>
-    </div>
-
-    <!-- Sitename and Banner -->
-		<div class="site-name">
-		Xen-Tools.org
-		  <div class="site-slogan"></div>
-		</div>
-		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
-
-    <!-- Main navigation -->
-		<h3 class="hide">Main Navigation</h3>
-    <div class="nav-main nav-main-font">
-<!--#include virtual="/inc/top-menu.html" -->
-		</div>
-
-
-
-	<!-- Sub-Navigation -->
-		<h3 class="hide">Left Navigation</h3>
-		<div class="nav-sub nav-sub-font nav-sub-align">
-    <div class="buffer"></div>
-      <ul>
-	<li class="title">Argos</li>
-	<li class="group"><a class="selected" href="/software/argos/">Introduction</a></li>
-	<li class="group"><a href="/software/argos/cvs.html">CVS</a></li>
-      </ul>
-    </div>
-
-
-    <!-- WRAP CONTENT AND SIDEBAR -->
-    <div class="container-content-sidebar">
-
-	<!-- 	CONTENT -->
+<xentitle>xen-tools.org - Sitemap</xentitle>
 		<h3 class="hide">Content</h3>
 		<div class="content content-font">
 
@@ -115,15 +58,3 @@
 
 
     </div>
-
-    <!-- END WRAP CONTENT AND SIDEBAR -->
-		</div>
-
-    <!-- FOOTER -->
-		<h3 class="hide">Footer</h3>
-    <div class="footer footer-font">
-       Copyright &copy; 2007 <a href="http://www.steve.org.uk/">Steve Kemp</a> | All Rights Reserved<br />
-    </div>
-  </div>
-</body>
-</html>

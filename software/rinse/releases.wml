@@ -1,0 +1,34 @@
+<xentitle>xen-tools.org - rinse</xentitle>
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+	  <!-- Page title -->
+		  <div class="content-pagetitle"></div>
+
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Rinse Stable Releases</div>
+	<div class="contentbox-noshading">
+	<p>The most recent version of Rinse is v1.7, and you may download it via the following link:</p>
+<ul>
+<li><a href="rinse-1.7.tar.gz">rinse-1.7.tar.gz</a></li>
+<li><a href="rinse-1.7.tar.gz.asc">rinse-1.7.tar.gz.asc</a> -1k (GPG signature which may be validated using <a href="http://www.steve.org.uk/contact/steve_kemp.gpg">my</a> <a href="http://www.gnu.org/software/gnump3d/steve_kemp.gpg">public</a> <a href="http://db.debian.org/fetchkey.cgi?fingerprint=DB1FF3FB1D08FC01ED222243C0CFC6B3CD4C0D9D">key</a>).</li>
+</ul>
+<br />
+<p>If you use Debian GNU/Linux you can find a package for Etch at <a href="http://apt.steve.org.uk/">my apt-get repository</a>, just run:</p>
+<pre>
+apt-get update
+apt-get install rinse
+</pre>
+
+</div></div>    </div>
+    <!-- SIDEBAR -->
+		<h3 class="hide">Sidebar</h3>
+	  <div class="sidebar sidebar-font">
+
+			<div class="sidebarbox-border bg-yellow03">
+	<div class="sidebarbox-title-shading bg-yellow07">Binary Package</div>
+	<p>A Debian package could be made available if there is any interest?</p>
+    </div>
+    </div>

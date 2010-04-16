@@ -1,0 +1,38 @@
+<xentitle>xen-tools.org - Xen Links</xentitle>
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+	  <!-- Page title -->
+		  <div class="content-pagetitle"></div>
+
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Xen Links</div>
+	<div class="contentbox-noshading">
+	<p>The Xen community contains several useful resources, in addition to the Debian-Specific links you can view to the right.</p>
+	<p>Here are a few of the most commonly sought resources:</p>
+	<ul>
+	<li><a href="http://wiki.xensource.com/">The Xen Wiki</a></li>
+	<li><a href="http://lists.xensource.com/cgi-bin/mailman/listinfo/xen-users">The Xen-Users mailing list</a></li>
+	<li><a href="http://xen-hosting.org/">Xen Hosting</a>
+	<ul>
+	<li>Start up your own co-operative.</li>
+	</ul></li>
+	</ul>
+	</div>
+      </div>
+
+
+    </div>
+
+
+    <!-- SIDEBAR -->
+		<h3 class="hide">Sidebar</h3>
+	  <div class="sidebar sidebar-font">
+
+	<div class="sidebarbox-border bg-yellow03">
+	<div class="sidebarbox-title-shading bg-yellow07">Xen + Debian</div>
+	<p>The <a href="http://www.debian-administration.org/">Debian Administration</a> website contains several useful articles on <a href="http://www.debian-administration.org/tag/xen">using Xen upon Debian</a>.</p>
+      </div>
+    </div>

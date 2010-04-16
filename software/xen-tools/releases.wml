@@ -1,0 +1,39 @@
+<xentitle>Xen Software: xen-tools</xentitle>
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+	  <!-- Page title -->
+		  <div class="content-pagetitle"></div>
+
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Xen Tools Stable Releases</div>
+	<div class="contentbox-noshading">
+	<p>The most recent version of Xen Tools is 4.1 and you can download it via the following link:</p>
+<ul>
+<li><a href="xen-tools-4.1.tar.gz">xen-tools-4.1.tar.gz</a> - 124k</li>
+<li><a href="xen-tools-4.1.tar.gz.asc">xen-tools-4.1.tar.gz.asc</a> -1k (GPG signature which may be validated using <a href="http://www.steve.org.uk/contact/steve_kemp.gpg">my</a> <a href="http://www.gnu.org/software/gnump3d/steve_kemp.gpg">public</a> <a href="http://db.debian.org/fetchkey.cgi?fingerprint=DB1FF3FB1D08FC01ED222243C0CFC6B3CD4C0D9D">key</a>).</li>
+</ul>
+<br />
+<p>Binary packages of the project are included in the <a href="http://www.debian.org/">Debian GNU/Linux Project</a>, in both the Unstable and Testing branches.</p>
+<p>I maintain a package for Debian stable upon my <a href="http://apt.steve.org.uk/">personal apt repository</a>.</p>
+<p>If you'd like to be informed of new releases please consider subscribing to <a href="http://freshmeat.net/projects/xen-tools">xen-tools freshmeat project</a> - if you did this it would be appreciated if you would <a href="http://freshmeat.net/rate/57845/">rate the project</a>.</p>
+
+	</div>
+      </div>
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">ChangeLog</div>
+	<div class="contentbox-noshading">
+<p>The release which you can download above contains a full changelog which is automatically generated from the <a href="cvs.html">CVS repository</a>.</p>
+<p>Here is a brief summery of the changes since the previous release:</p>
+<ul>
+<li>Fixed a couple of issues when installing into physical partitions.</li>
+<li>Support pygrub.</li>
+<li>Handle /dev/pts for new images.</li>
+</ul>
+<p>Some <a href="upgrading.html">notes on upgrading</a> from the previous release are available.</p>
+</div></div>
+    </div>

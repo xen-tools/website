@@ -1,0 +1,24 @@
+<xentitle>xen-tools.org - Rinse</xentitle>
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+	  <!-- Page title -->
+		  <div class="content-pagetitle"></div>
+
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Mailing Lists</div>
+	<div class="contentbox-noshading">
+	<p>There are two mailing lists setup for people interested in the rinse project::</p>
+	<dl>
+	<dt><a href="http://xen-tools.org/lists/">xen-tools-discuss</a></dt>
+	<dd><p>This is a general purpose mailing list, for reporting bugs, asking questsion or making suggestions.</p></dd>
+	<dt><a href="http://repository.steve.org.uk/lists/rinses-commits">rinse-commits</a></dt>
+	<dd><p>This is is a developer-orientated mailing list, which receives copies of each commit applied to the <a href="mercurial.html">source repository</a>.</p></dd>
+	</dl>
+	</div>
+      </div>
+
+
+    </div>

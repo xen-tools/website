@@ -1,0 +1,48 @@
+<xentitle>rinse</xentitle>
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+	  <!-- Page title -->
+		  <div class="content-pagetitle"></div>
+
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">rinse</div>
+	<div class="contentbox-noshading">
+	<p>The rinse tool was born out of a frustration with the currently available solutions for installing minimal copies of RPM-based distributions.</p>
+	<p>The need to perform simple chroot() installations of other distributions is not common, but the ability to do such a thing is very useful when it comes to testing new tools, and working towards the creation of new Xen guests.</p>
+<br />
+	</div>
+      </div>
+
+
+			<div class="contentbox-container-left">
+			  <div class="contentbox-title-shading bg-blue07 box-on">&nbsp;</div>
+			  <div class="contentbox-title-shading">Supported Distros</div>
+	<div class="contentbox-noshading">
+       <p>The following distributions are supported:</p>
+<ul>
+<li>Centos 4 &amp; 5</li>
+<li>Fedora Core 4, 5, 6, 7, 8, 9, &amp; 10</li>
+</ul>
+       </div>
+      </div>
+
+			<div class="contentbox-container-right">
+			  <div class="contentbox-title-shading bg-green07 box-on">&nbsp;</div>
+			  <div class="contentbox-title-shading">Feature Requests?</div>
+	<div class="contentbox-noshading">
+	<p>If you have suggestions for distributions to support, or features to add please do <a href="/contact/">get in touch</a>.</p>
+	</div>
+</div>    </div>
+
+    <!-- SIDEBAR -->
+		<h3 class="hide">Sidebar</h3>
+	  <div class="sidebar sidebar-font">
+
+			<div class="sidebarbox-border bg-yellow03">
+	<div class="sidebarbox-title-shading bg-yellow07">rinse</div>
+	<p>This software was inspired by <a href="http://rpmstrap.pimpscript.net/">rpmstrap</a> &amp; <a href="http://packages.debian.org/debootstrap">debootstrap</a>.</p>
+    </div>
+    </div>

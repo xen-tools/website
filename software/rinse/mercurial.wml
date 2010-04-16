@@ -1,0 +1,28 @@
+<xentitle>Rinse</xentitle>
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+	  <!-- Page title -->
+		  <div class="content-pagetitle"></div>
+
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Source Access</div>
+	<div class="contentbox-noshading">
+	<p>The <tt>rinse</tt> development occurs in a publically accessible Mercurial repository, so you are welcome to download releases from there.</p>
+	<p>If you wish to following the development, or contribute patches, then this is the preferred thing to patch against:</p>
+	<ul>
+	<li><a href="http://rinse.repository.steve.org.uk/">Rinse Mercurial repository</a></li>
+	</ul>
+<p>You can checkout a copy of the current version of the code by running the following two commands:</p>
+<pre>
+hg clone http://rinse.repository.steve.org.uk/
+</pre>
+	<p>Once you have a copy of the project checked out you can keep it up to date by executing "<tt>make update</tt>".</p>
+
+
+	</div>
+</div>
+
+    </div>

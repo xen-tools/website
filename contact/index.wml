@@ -1,0 +1,42 @@
+<xentitle>Contact</xentitle>
+		<h3 class="hide">Content</h3>
+		<div class="content content-font">
+
+	  <!-- Page title -->
+		  <div class="content-pagetitle"></div>
+
+
+			<div class="contentbox-container-full">
+			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+				<div class="contentbox-title-shading">Contact</div>
+	<div class="contentbox-noshading">
+	<p>If you'd like to report any bugs against <a href="/software">the software</a> which is available from this site then please consider seeing the software-specific bug reporting pages.</p>
+	<p>By reporting a bug to the appropriate mailing list you'll most likely receive assistance from people before I've gotten round to reading it.</p>
+	<p>If you think the issue you have isn't suitable for public consumption, and you're happy to wait for a reply, then contact Steve:</p>
+	<ul>
+	<li>abe<tt>@</tt>deuxchevaux.org for xen-tools, steve<tt>@</tt>steve.org.uk for all other software</li>
+	</ul>
+	</div>
+      </div>
+
+
+    </div>
+
+
+    <!-- SIDEBAR -->
+		<h3 class="hide">Sidebar</h3>
+	  <div class="sidebar sidebar-font">
+
+	<div class="sidebarbox-border bg-yellow03">
+	<div class="sidebarbox-title-shading bg-yellow07">Xen + Debian</div>
+	<p>The <a href="http://www.debian-administration.org/">Debian Administration</a> website contains several useful articles on <a href="http://www.debian-administration.org/tag/xen">using Xen upon Debian</a>.</p>
+      </div>
+			<div class="sidebarbox-border bg-red02">
+	<div class="sidebarbox-title-shading bg-red05 txt-white">Any questions?</div>
+	<p>If you have any questions about running <tt>xen-tools</tt> please feel free to <a href="/contact/">contact the author</a>.</p>
+      </div>
+
+
+
+
+    </div>
