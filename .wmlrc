@@ -1,3 +1,4 @@
--i includes/template.wml
+-I includes
+-i <template.wml>
 -o %BASE.html
 -W 2,-X10
