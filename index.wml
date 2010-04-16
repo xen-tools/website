@@ -1,60 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<xentitle>The Site for Xen automation</xentitle>
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="description" content="Software for the Xen hypervisor" />
-  <meta name="keywords" content="xen,debian,xen-tools" />
-  <meta name="author" content="Steve Kemp" />
-  <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
-  <title>xen-tools.org - The Site for Xen automation</title>
-</head>
-
-<body>
-  <div id="page-container">
-
-	<!-- HEADER -->
-    <!-- Global Navigation -->
-		<h3 class="hide">Global Navigation</h3>
-    <div class="nav-global-container">
-      <div class="nav-global nav-global-font">
-			  <ul>
-			  <li><a href="/contact/">Contact</a></li>
-			  <li><a href="/sitemap.html">Site Map</a></li>
-			  </ul>
-		  </div>
-    </div>
-
-    <!-- Sitename and Banner -->
-		<div class="site-name">
-		Xen-Tools.org
-		  <div class="site-slogan"></div>
-		</div>
-		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
-
-    <!-- Main navigation -->
-		<h3 class="hide">Main Navigation</h3>
-    <div class="nav-main nav-main-font">
-<!--#include virtual="/inc/top-menu.html" -->
-</div>
-
-
-	<!-- Sub-Navigation -->
-		<div class="nav-sub nav-sub-font nav-sub-align">
-    <div class="buffer"></div>
-      <ul>
-	<li class="title">Links</li>
-	<li class="group"><a href="/" class="selected">Home</a></li>
-	<li class="group"><a href="/software/">Software</a></li>
-	<li class="group"><a href="/links/">Links</a></li>
-      </ul>
-		    </div>
-
-
-    <!-- WRAP CONTENT AND SIDEBAR -->
-    <div class="container-content-sidebar">
-
-	<!-- 	CONTENT -->
 		<h3 class="hide">Content</h3>
 		<div class="content content-font">
 
@@ -114,15 +59,3 @@
 
 
     </div>
-
-    <!-- END WRAP CONTENT AND SIDEBAR -->
-		</div>
-
-    <!-- FOOTER -->
-		<h3 class="hide">Footer</h3>
-    <div class="footer footer-font">
-       Copyright &copy; 2006-2009 <a href="http://www.steve.org.uk/">Steve Kemp</a>, 2010 <a href="http://noone.org/abe/">Axel Beckert</a> | All Rights Reserved<br />
-    </div>
-  </div>
-</body>
-</html>

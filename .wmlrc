@@ -1,0 +1,3 @@
+-i includes/template.wml
+-o %BASE.html
+-W 2,-X10
