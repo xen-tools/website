@@ -1,14 +1,5 @@
 <title>Xen Software: xen-tools</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Example Usage</div>
+<div class="contentbox-title-shading">Example Usage</div>
 	<div class="contentbox-noshading">
 	<p>There are several different ways that the <tt>xen-tools</tt> scripts can be used, so it is difficult to examine all possible usage scenarios.  Here will will concentrate upon the installation of Debian Sarge.</p>
 	<p>The basic default method of installing new Debian GNU/Linux instances is via the <a href="http://packages.debian.org/debootstrap">debootsrap package</a>, included as part of Debian.</p>

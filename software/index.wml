@@ -1,14 +1,5 @@
 <title>Xen Software</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Xen Software</div>
+<div class="contentbox-title-shading">Xen Software</div>
 	<div class="contentbox-noshading">
 	<p>From here you can learn about and download various pieces of software:</p>
 	<dl>
@@ -38,8 +29,7 @@
     </div>
 
     <!-- SIDEBAR -->
-		<h3 class="hide">Sidebar</h3
->
+		<h3 class="hide">Sidebar</h3>
 	  <div class="sidebar sidebar-font">
 			<div class="sidebarbox-border bg-blue02">
 	<div class="sidebarbox-title-shading bg-blue05 txt-white">Argos</div>

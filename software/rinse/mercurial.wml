@@ -1,14 +1,5 @@
 <title>Rinse</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Source Access</div>
+<div class="contentbox-title-shading">Source Access</div>
 	<div class="contentbox-noshading">
 	<p>The <tt>rinse</tt> development occurs in a publically accessible Mercurial repository, so you are welcome to download releases from there.</p>
 	<p>If you wish to following the development, or contribute patches, then this is the preferred thing to patch against:</p>

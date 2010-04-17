@@ -1,13 +1,4 @@
 <title>Sitemap</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-  	  <!-- Page title -->		
-		  <div class="content-pagetitle"></div>
-
-			
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
 				<div class="contentbox-title-shading">SiteMap</div>
         <div class="contentbox-noshading">
 	<ul>
@@ -26,25 +17,3 @@
 	</ul>
         </div>
       </div>						
-
-
-    </div>
-
-
-    <!-- SIDEBAR -->
-		<h3 class="hide">Sidebar</h3>		
-	  <div class="sidebar sidebar-font">
-
-	<div class="sidebarbox-border bg-yellow03">
-        <div class="sidebarbox-title-shading bg-yellow07">Xen + Debian</div>
-        <p>The <a href="http://www.debian-administration.org/">Debian Administration</a> website contains several useful articles on <a href="http://www.debian-administration.org/tag/xen">using Xen upon Debian</a>.</p>
-      </div>									
-			<div class="sidebarbox-border bg-red02">
-        <div class="sidebarbox-title-shading bg-red05 txt-white">Any questions?</div>
-        <p>If you have any questions about running <tt>xen-tools</tt> please feel free to <a href="/contact/">contact the author</a>.</p>
-      </div>			
-			
-
-		
-	
-    </div>

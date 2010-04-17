@@ -1,14 +1,5 @@
 <title>Xen Software: xen-shell downloads</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Xen Shell Stable Releases</div>
+<div class="contentbox-title-shading">Xen Shell Stable Releases</div>
 	<div class="contentbox-noshading">
 	<p>The most recent version of the Xen Shell is version v1.9, and you can download it via the following link:</p>
 <ul>

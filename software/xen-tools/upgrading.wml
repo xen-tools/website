@@ -1,14 +1,5 @@
 <title>Xen Software: xen-tools</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Upgrading to v3.2</div>
+<div class="contentbox-title-shading">Upgrading to v3.2</div>
 	<div class="contentbox-noshading">
 	<p>From the v3.2 release onwards the handling of the installation type has changed.  The following options are no longer supported:</p>
 <ul>

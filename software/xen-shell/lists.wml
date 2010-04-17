@@ -1,14 +1,5 @@
 <title>Xen Software: xen-shell mailing lists</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Mailing Lists</div>
+<div class="contentbox-title-shading">Mailing Lists</div>
 	<div class="contentbox-noshading">
 	<p>There are two mailing lists setup which might be interesting to users of the xen shell:</p>
 	<dl>

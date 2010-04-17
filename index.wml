@@ -1,33 +1,6 @@
 <title>The Site for Xen automation</title>
 
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-			<div class="contentbox-container-left">
-			  <div class="contentbox-title-shading bg-blue07 box-on">&nbsp;</div>
-			  <div class="contentbox-title-shading">About Xen</div>
-	<div class="contentbox-noshading">
-	  <p><b>Xen</b> is an open source virtualisation product released by the University of Cambridge.</p>
-	  <p>It allows your machines to run multiple independant Linux systems upon one physical host.</p>
-       </div>
-      </div>
-
-			<div class="contentbox-container-right">
-			  <div class="contentbox-title-shading bg-green07 box-on">&nbsp;</div>
-			  <div class="contentbox-title-shading">Xen Software</div>
-	<div class="contentbox-noshading">
-	<p><a href="/software/xen-shell/">xen-shell</a> is a simple console shell for a hosting company to allow customers to control their own Xen instance.</p>
-
-	<p><a href="/software/xen-tools/">xen-tools</a> is a collection of software which allow you to create new guest domains.</p>
-	</div>
-      </div>
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">About This Site</div>
+<div class="contentbox-title-shading">About This Site</div>
 	<div class="contentbox-noshading">
 	<p>This site is designed to collect resources useful to people running Xen upon Debian GNU/Linux, and hosts several pieces of software which can be useful to Xen users:</p>
 	<ul>

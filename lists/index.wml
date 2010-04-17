@@ -1,39 +1,9 @@
 <title>xen-tools.org - Mailing Lists</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-  	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Mailing Lists</div>
+<div class="contentbox-title-shading">Mailing Lists</div>
         <div class="contentbox-noshading">
         <p>There is a general purpose mailing list hosted for users of the various xen-tools.org projects, called <tt>xen-tools-discuss</tt>.</p>
         <p>The list is <a href="/lists/xen-tools-discuss">archived here</a>.</P>
         <p>To join the list please send a message, with subject "subscribe", to <tt>xen-tools-discuss-subscribe@xen-tools.org</tt>.  To unsubscribe give your message the appropriate subject.</p>
         </div>
       </div>
-
-
-    </div>
-
-
-    <!-- SIDEBAR -->
-		<h3 class="hide">Sidebar</h3>
-	  <div class="sidebar sidebar-font">
-
-	<div class="sidebarbox-border bg-yellow03">
-        <div class="sidebarbox-title-shading bg-yellow07">Xen + Debian</div>
-        <p>The <a href="http://www.debian-administration.org/">Debian Administration</a> website contains several useful articles on <a href="http://www.debian-administration.org/tag/xen">using Xen upon Debian</a>.</p>
-      </div>
-			<div class="sidebarbox-border bg-red02">
-        <div class="sidebarbox-title-shading bg-red05 txt-white">Any questions?</div>
-        <p>If you have any questions about running <tt>xen-tools</tt> please feel free to <a href="/contact/">contact the author</a>.</p>
-      </div>
-
-
-
-
     </div>

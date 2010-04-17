@@ -1,14 +1,5 @@
 <title>Xen Software: xen-tools</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Source Repository</div>
+<div class="contentbox-title-shading">Source Repository</div>
 	<div class="contentbox-noshading">
 	<p>All of the development of the <tt>xen-tools</tt> software is conducted via <a href="http://gitorious.org/xen-tools/xen-tools/">a public Git Repository</a>, if you'd like to use the most recent version of the code then please consider installing from there.</p>
 	<p>You can checkout a copy of the current version of the code by running the following command:</p>

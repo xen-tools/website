@@ -1,14 +1,5 @@
 <title>rinse</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">rinse</div>
+<div class="contentbox-title-shading">rinse</div>
 	<div class="contentbox-noshading">
 	<p>The rinse tool was born out of a frustration with the currently available solutions for installing minimal copies of RPM-based distributions.</p>
 	<p>The need to perform simple chroot() installations of other distributions is not common, but the ability to do such a thing is very useful when it comes to testing new tools, and working towards the creation of new Xen guests.</p>

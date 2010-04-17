@@ -1,14 +1,5 @@
 <title>Xen Software: xen-tools</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Reporting Bugs</div>
+<div class="contentbox-title-shading">Reporting Bugs</div>
 	<div class="contentbox-noshading">
 	<p>If you're using the current packages included as part of the Debian GNU/Linux distribution please report any bugs using the distributions <tt>reportbug</tt> command.</p>
 	<p>Reporting your bugs using the Debian tools allows everybody to see and comment upon any open issues:</p>
@@ -19,9 +10,4 @@
 	<p>This will allow other users to comment and confirm the bug, or suggest a work-around before it can be fixed.</p>
 	</div>
       </div>
-    </div>
-
-    <!-- SIDEBAR -->
-		<h3 class="hide">Sidebar</h3>
-	  <div class="sidebar sidebar-font">
     </div>

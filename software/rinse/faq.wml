@@ -1,14 +1,5 @@
 <title>xen-tools.org - Rinse</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Frequently Asked Questions</div>
+<div class="contentbox-title-shading">Frequently Asked Questions</div>
 	<div class="contentbox-noshading">
 	<p>This page answers to both frequently asked questions and frequently anticipated questions.</p>
 

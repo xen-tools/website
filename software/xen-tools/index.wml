@@ -1,14 +1,5 @@
 <title>Xen Software: xen-tools</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Xen Tools</div>
+<div class="contentbox-title-shading">Xen Tools</div>
 	<div class="contentbox-noshading">
 	<p>xen-tools is a collection of simple perl scripts which allow you to easily create new guest Xen domains upon your Debian GNU/Linux host.</p>
 	<p>Once installed and configured you can create a new Xen instance in a matter of minutes.  Each new Xen domain will be complete with:</p>

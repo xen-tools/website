@@ -1,14 +1,5 @@
 <title>xen-tools.org - Sitemap</title>
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
-
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
-
-
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
-				<div class="contentbox-title-shading">Argos</div>
+<div class="contentbox-title-shading">Argos</div>
 	<div class="contentbox-noshading">
   <p>Argos is a new project which replaces my previous attempt at a distributed Xen control panel.  Unlike the previous project this control system is designed to allow you to control the Xen instances running upon an <i>arbitary</i> number of Xen hosts.</p>
   <p>Each managed Xen host (node) will run a small client application which will communicate back and forth with a central server.</p>
