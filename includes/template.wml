@@ -16,113 +16,133 @@
 </head>
 
 <body>
-  <div id="page-container">
+<div id="page-container">
 
-	<!-- HEADER -->
-    <!-- Global Navigation -->
-		<h3 class="hide">Global Navigation</h3>
-    <div class="nav-global-container">
-      <div class="nav-global nav-global-font">
-			  <ul>
-	    <li><a href="/contact/">Contact</a></li>
-	    <li><a href="/sitemap.html">Site Map</a></li>
-	</ul>
-		  </div>
-    </div>
+  <!-- HEADER -->
+  <!-- Global Navigation -->
+  <h3 class="hide">Global Navigation</h3>
 
-    <!-- Sitename and Banner -->
-		<div class="site-name">
-		Xen-Tools.org
-		</div>
-		<div><img class="img-header" src="/img/header.jpg" alt=""/></div>
-
-    <!-- Main Navigation -->
-		<h3 class="hide">Top Navigation</h3>
-    <div class="nav-main nav-main-font">
-<!--#include virtual="/inc/top-menu.html" -->
-		</div>
-
-	<!-- Sub-Navigation -->
-		<h3 class="hide">Left Navigation</h3>
-		<div class="nav-sub nav-sub-font nav-sub-align">
-    <div class="buffer"></div>
+  <div class="nav-global-container">
+    <div class="nav-global nav-global-font">
       <ul>
-	<li class="title">xen-tools</li>
-	<li class="group"><a href="/software/xen-tools/">Documentation</a></li>
-	<li><a href="/software/xen-tools/" class="selected">Introduction</a></li>
-	<li><a href="examples.html">Examples</a></li>
-	<li><a href="faq.html">FAQ</a></li>
-	<li><a href="lists.html">Mailing lists</a></li>
-	<li><a href="bugs.html">Reporting Bugs</a></li>
-	<li><a href="upgrading.html">Upgrading</a></li>
-	<li class="group"><a href="releases.html">Download</a></li>
-	<li><a href="releases.html">Releases</a></li>
-	<li><a href="mercurial.html">Mercurial</a></li>
+	<li><a href="/contact/">Contact</a></li>
+	<li><a href="/sitemap.html">Site Map</a></li>
       </ul>
-      <p></p>
-    <div class="buffer"></div>
-
-
     </div>
+  </div>
 
-    <!-- WRAP CONTENT AND SIDEBAR -->
-    <div class="container-content-sidebar">
-		<h3 class="hide">Content</h3>
-		<div class="content content-font">
+  <!-- Sitename and Banner -->
+  <div class="site-name">
+    Xen-Tools.org
+  </div>
+  <div><img class="img-header" src="/img/header.jpg" alt=""/></div>
 
-	  <!-- Page title -->
-		  <div class="content-pagetitle"></div>
+  <!-- Main Navigation -->
+  <h3 class="hide">Top Navigation</h3>
+  <div class="nav-main nav-main-font">
+    <!--#include virtual="/inc/top-menu.html" -->
+  </div>
 
-			<div class="contentbox-container-left">
-			  <div class="contentbox-title-shading bg-blue07 box-on">&nbsp;</div>
-			  <div class="contentbox-title-shading">About Xen</div>
+  <!-- Sub-Navigation -->
+  <h3 class="hide">Left Navigation</h3>
+  <div class="nav-sub nav-sub-font nav-sub-align">
+    <div class="buffer"></div>
+    <ul>
+      <li class="title">xen-tools</li>
+      <li class="group"><a href="/software/xen-tools/">Documentation</a></li>
+      <li><a href="/software/xen-tools/" class="selected">Introduction</a></li>
+      <li><a href="examples.html">Examples</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="lists.html">Mailing lists</a></li>
+      <li><a href="bugs.html">Reporting Bugs</a></li>
+      <li><a href="upgrading.html">Upgrading</a></li>
+      <li class="group"><a href="releases.html">Download</a></li>
+      <li><a href="releases.html">Releases</a></li>
+      <li><a href="mercurial.html">Mercurial</a></li>
+    </ul>
+    <p></p>
+    <div class="buffer"></div>
+  </div>
+
+  <!-- WRAP CONTENT AND SIDEBAR -->
+  <div class="container-content-sidebar">
+    <h3 class="hide">Content</h3>
+
+    <div class="content content-font">
+      <!-- Page title -->
+      <div class="content-pagetitle"></div>
+
+      <div class="contentbox-container-left">
+	<div class="contentbox-title-shading bg-blue07 box-on">&nbsp;</div>
+	<div class="contentbox-title-shading">About Xen</div>
 	<div class="contentbox-noshading">
 	  <p><b>Xen</b> is an open source virtualisation product released by the University of Cambridge.</p>
 	  <p>It allows your machines to run multiple independant Linux systems upon one physical host.</p>
-       </div>
-      </div>
-
-			<div class="contentbox-container-right">
-			  <div class="contentbox-title-shading bg-green07 box-on">&nbsp;</div>
-			  <div class="contentbox-title-shading">Xen Software</div>
-	<div class="contentbox-noshading">
-	<p><a href="/software/xen-shell/">xen-shell</a> is a simple console shell for a hosting company to allow customers to control their own Xen instance.</p>
-
-	<p><a href="/software/xen-tools/">xen-tools</a> is a collection of software which allow you to create new guest domains.</p>
 	</div>
       </div>
 
-			<div class="contentbox-container-full">
-			  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
+      <div class="contentbox-container-right">
+	<div class="contentbox-title-shading bg-green07 box-on">&nbsp;</div>
+	  <div class="contentbox-title-shading">Xen Software</div>
+	  <div class="contentbox-noshading">
+
+	    <p><a href="/software/xen-shell/">xen-shell</a> is a
+	    simple console shell for a hosting company to allow
+	    customers to control their own Xen instance.</p>
+
+	    <p><a href="/software/xen-tools/">xen-tools</a> is a
+	    collection of software which allow you to create new guest
+	    domains.</p>
+
+	  </div>
+	</div>
+
+	<div class="contentbox-container-full">
+	  <div class="contentbox-title-shading bg-red07 box-on">&nbsp;</div>
 :##}
 {#FOOTER#:
+	</div>
 
+	<!-- SIDEBAR -->
+	<h3 class="hide">Sidebar</h3>
+	<div class="sidebar sidebar-font">
+	  <div class="sidebarbox-border bg-yellow03">
+	    <div class="sidebarbox-title-shading bg-yellow07">Xen + Debian</div>
 
-    </div>
+	    <p>The <a href="http://www.debian-administration.org/"
+	    >Debian Administration</a> website contains several useful
+	    articles on <a
+	    href="http://www.debian-administration.org/tag/xen" >using
+	    Xen upon Debian</a>.</p>
 
+	  </div>
 
-    <!-- SIDEBAR -->
-		<h3 class="hide">Sidebar</h3>		
-	  <div class="sidebar sidebar-font">
+	  <div class="sidebarbox-border bg-red02">
+	    <div class="sidebarbox-title-shading bg-red05 txt-white">Any questions?</div>
 
-	<div class="sidebarbox-border bg-yellow03">
-        <div class="sidebarbox-title-shading bg-yellow07">Xen + Debian</div>
-        <p>The <a href="http://www.debian-administration.org/">Debian Administration</a> website contains several useful articles on <a href="http://www.debian-administration.org/tag/xen">using Xen upon Debian</a>.</p>
-      </div>									
-			<div class="sidebarbox-border bg-red02">
-        <div class="sidebarbox-title-shading bg-red05 txt-white">Any questions?</div>
-        <p>If you have any questions about running <tt>xen-tools</tt> please feel free to <a href="/contact/">contact the author</a>.</p>
+	    <p>If you have any questions about running
+	    <tt>xen-tools</tt> please feel free to <a href="/contact/"
+	    >contact the author</a>.</p>
+
+	  </div>
+	</div>
+
+	<!-- END WRAP CONTENT AND SIDEBAR -->
+      </div>
+
+      <!-- FOOTER -->
+      <h3 class="hide">Footer</h3>
+      <div class="footer footer-font">
+
+	Copyright &copy; 2006-2009 <a href="http://www.steve.org.uk/"
+	>Steve Kemp</a>,
+
+	2010 <a href="http://noone.org/abe/">Axel Beckert</a> | All
+	Rights Reserved
+
       </div>
     </div>
-    <!-- END WRAP CONTENT AND SIDEBAR -->
-		</div>
-
-    <!-- FOOTER -->
-		<h3 class="hide">Footer</h3>
-    <div class="footer footer-font">
-       Copyright &copy; 2006-2009 <a href="http://www.steve.org.uk/">Steve Kemp</a>, 2010 <a href="http://noone.org/abe/">Axel Beckert</a> | All Rights Reserved<br />
-    </div>
-  </div>
+  </div> <!-- ? -->
 </body>
 </html>
 :##}
