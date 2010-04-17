@@ -1,4 +1,5 @@
 -I includes
 -i <template.wml>
+-D ROOTDIR~.
 -o %BASE.html
 -W 2,-X10
