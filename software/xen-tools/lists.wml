@@ -12,7 +12,7 @@
 	<div class="contentbox-noshading">
 	<p>There are two mailing lists setup which might be interesting to users of xen-tools:</p>
 	<dl>
-	<dt><a href="http://xen-tools.org/lists/">xen-tools-discuss</a></dt>
+	<dt><a href="/lists/">xen-tools-discuss</a></dt>
 	<dd><p>This is a general purpose mailing list, for reporting bugs, asking questsion or making suggestions.</p></dd>
 	<dt><a href="http://repository.steve.org.uk/lists/xen-tools-commits">xen-tools-commits</a></dt>
 	<dd><p>This is is a developer-orientated mailing list, which receives copies of each commit applied to the <a href="mercurial.html">source repository</a>.</p></dd>
