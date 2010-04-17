@@ -29,6 +29,6 @@ apt-get install rinse
 
 			<div class="sidebarbox-border bg-yellow03">
 	<div class="sidebarbox-title-shading bg-yellow07">Binary Package</div>
-	<p>A Debian package could be made available if there is any interest?</p>
+	<p><a href="http://packages.debian.org/rinse">A Debian package is also available in the official Debian archive.</a></p>
     </div>
     </div>
