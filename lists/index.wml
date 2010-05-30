@@ -1,9 +1,9 @@
 <title>xen-tools.org - Mailing Lists</title>
 <div class="contentbox-title-shading">Mailing Lists</div>
         <div class="contentbox-noshading">
-        <p>There is a general purpose mailing list hosted for users of the various xen-tools.org projects, called <tt>xen-tools-discuss</tt>.</p>
-        <p>The list is <a href="/lists/xen-tools-discuss">archived here</a>.</P>
-        <p>To join the list please send a message, with subject "subscribe", to <tt>xen-tools-discuss-subscribe@xen-tools.org</tt>.  To unsubscribe give your message the appropriate subject.</p>
+        <p>There is a general purpose mailing list hosted for users of the various xen-tools.org projects, called <tt><a href="/mailman/listinfo/xen-tools-discuss">xen-tools-discuss</a></tt>.</p>
+        <p>The list is <a href="/pipermail/xen-tools-discuss/">archived here</a>.</P>
+        <p>To join or leave the list please see <a href="/mailman/listinfo/xen-tools-discuss">the list's web interface</a>.</p>
         </div>
       </div>
     </div>
